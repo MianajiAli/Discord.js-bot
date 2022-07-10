@@ -27,7 +27,7 @@ function myLoop() {         //  create a loop function
     if (i < nu) {           //  if the counter < 10, call the loop function
       myLoop();             //  ..  again which will trigger another 
     }                       //  ..  setTimeout()
-  }, 6000)
+  }, 12000)
 }
 
 myLoop();  
