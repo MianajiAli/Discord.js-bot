@@ -16,16 +16,15 @@ module.exports = {
 function myLoop() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
 	superagent.get('https://nekobot.xyz/api/image')
-	.query({ type: 'boobs'})
+	.query({ type: tn})
 	.end((err, response) => {
-		const boobs = new Discord.MessageEmbed()
-		.setTitle('Enjoy :smiling_imp:')
+		const ns = new Discord.MessageEmbed()
 		.setImage(response.body.message)
 		.setColor(colors.main)
-	  message.channel.send(boobs)
+	  message.channel.send(ns)
 	});
     i++;                    //  increment the counter
-    if (i < 10) {           //  if the counter < 10, call the loop function
+    if (i < nu) {           //  if the counter < 10, call the loop function
       myLoop();             //  ..  again which will trigger another 
     }                       //  ..  setTimeout()
   }, 3000)
