@@ -590,4 +590,4 @@ if(!role) return;
 }
 })
 
-client.login(token);
+client.login(process.env.TOKEN);
