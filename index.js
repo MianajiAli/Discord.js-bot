@@ -79,12 +79,26 @@ client.on("ready", () => {
 `;
 
 console.log(blue(DevEvil));
-  setInterval(() => {
-    const randomIndex = Math.floor(Math.random() * (activities.length - 1) + 1);
-    const newActivity = activities[randomIndex];
 
-    client.user.setActivity(newActivity);
-  }, 10000);
+const arrayOfStatus = [
+  `${client.guilds.cache.map((guild) => guild.name)}`,
+  `${client.guilds.cache.map((guild) => guild.channels.cache)} channels`,
+  `🔗dsc.gg/1dk`
+];
+setInterval(() => {
+  if (index === arrayOfStatus.length) index = 0;
+  const status = arrayOfStatus[index];
+  client.user.setPresence({
+    status: "idle",
+    activity: {
+      name: `${status}`,
+      type: "WATCHING",
+      details: null,
+      url: null,
+    },
+  });
+  index++;
+}, 10 * 1000);
 });
 
 client.on('error', console.error)
