@@ -85,6 +85,7 @@ const arrayOfStatus = [
   `${client.guilds.cache.map((guild) => guild.channels.cache)} channels`,
   `🔗dsc.gg/1dk`
 ];
+let index = 0;
 setInterval(() => {
   if (index === arrayOfStatus.length) index = 0;
   const status = arrayOfStatus[index];
