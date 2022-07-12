@@ -82,7 +82,7 @@ console.log(blue(DevEvil));
 
 const arrayOfStatus = [
   `${client.guilds.cache.map((guild) => guild.name)}`,
-  `${client.guilds.cache.map((guild) => guild.channels.cache)} channels`,
+  `${client.guilds.cache.map((guild) => guild.memberCount)} members`,
   `🔗dsc.gg/1dk`
 ];
 let index = 0;
