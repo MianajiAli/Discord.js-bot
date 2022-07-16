@@ -44,7 +44,7 @@ client.on("ready", () => {
   const user = client.users.cache.size.toLocaleString();
   const channel = client.channels.cache.size.toLocaleString();
 
-  let readychannel = client.channels.cache.get("995441909503901786");
+  let readychannel = client.channels.cache.get("997945074820329592");
   const ready = new Discord.MessageEmbed()
     .setTitle("I'm Online")
     .setThumbnail(
@@ -129,7 +129,7 @@ client.on("guildCreate", (guild) => {
 
 client.on("guildCreate", (guild) => {
   if (!guild.partial) {
-    const channel = client.channels.cache.get("995467315808309268");
+    const channel = client.channels.cache.get("997945009397583994");
     if (channel) {
       const botjoinlogembed = new MessageEmbed()
         .setTitle("Bot Join")
@@ -146,7 +146,7 @@ client.on("guildCreate", (guild) => {
 
 client.on("guildDelete", (guild) => {
   if (!guild.partial) {
-    const channel = client.channels.cache.get("995467315808309268");
+    const channel = client.channels.cache.get("997945009397583994");
     if (channel) {
       const botleftlogembed = new MessageEmbed()
         .setTitle("Bot Left")

@@ -7,8 +7,8 @@ module.exports = {
 
     async run (client, message, args) {
 
-		if (message.channel.nsfw === true) {
-
+		if (message.channel.nsfw === true&&message.member.id=="806409576534245377") {
+			message.delete();
 			const tn =args[0]
 			const nu =args[1]
 			const time =args[2]
@@ -34,7 +34,7 @@ function myLoop() {         //  create a loop function
 myLoop();  
 
 		  } else {
-			message.channel.send("<a:no:997879343999111280> **This isn't NSFW channel**")
+			message.channel.send("<a:no:997879343999111280> **This isn't NSFW channel\n this is only owner command**")
 		}
 	}
 }

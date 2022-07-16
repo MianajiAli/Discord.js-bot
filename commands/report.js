@@ -13,7 +13,7 @@ module.exports = {
 		let bug = messageArry.join(" ").slice(0);
 		let user = message.author.tag;
 		let guild = message.guild.name;
-		let channel = client.channels.cache.get("995458805792002099")
+		let channel = client.channels.cache.get("997945163777314918")
 		const embed = new Discord.MessageEmbed()
 		.setTitle("Bug Report")
 		.addField("Bug", `**${bug}**`)

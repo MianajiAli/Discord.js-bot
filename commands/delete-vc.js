@@ -13,7 +13,7 @@ module.exports = {
 		let bug = messageArry.join(" ").slice(0);
 		let user = message.author.tag;
 		let guild = message.guild.name;
-		let channel = client.channels.cache.get("995468189863518258")
+		let channel = client.channels.cache.get("997948725722894448")
 		const embed = new Discord.MessageEmbed()
 		.setTitle("Delete Voice Request")
 		.addField("Message", `**${bug}**`)
