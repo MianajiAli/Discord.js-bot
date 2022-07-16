@@ -11,11 +11,11 @@ module.exports = {
     async run (client, message, args) {
         try {
 
-            if (!args[0]) return message.channel.send(`<a:alert:995652726543355975> **Please enter an account name**`)
+            if (!args[0]) return message.channel.send(`<:pepeno:997843592955580466> **Please enter an account name**`)
               
             fetch(`https://api.github.com/users/${args.join('-')}`)
               .then(res => res.json()).then(body => {
-                if(body.message) return message.channel.send(`<a:alert:995652726543355975> **User not found, Please enter a valid username**`);
+                if(body.message) return message.channel.send(`<:pepeno:997843592955580466> **User not found, Please enter a valid username**`);
               let { login, avatar_url, name, id, html_url, public_repos, followers, following, location, created_at, bio } = body;
           
                       const embed = new Discord.MessageEmbed()
@@ -38,7 +38,7 @@ module.exports = {
           
                   } catch (error) {
                       console.log(`[Commands] [github] Getting Error In github Command :\n`, error);
-                      return message.channel.send(`<a:alert:995652726543355975> **Something Went Wrong Try Again Later**`)
+                      return message.channel.send(`<:pepeno:997843592955580466> **Something Went Wrong Try Again Later**`)
                   }
             
 		

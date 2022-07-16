@@ -7,8 +7,8 @@ module.exports = {
     async run (client, message, args) {
 		let messageArry = message.content.split(" ")
 		let cmd = messageArry[0]; 
-		if(!message.member.hasPermission("ADMINISTRATOR"))return message.channel.send('<a:alert:995652726543355975> **You can not use this command | Permission: ADMINISTRATOR**')
-        if(!message.guild.me.hasPermission("MANAGE_MESSAGE")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions | Permissions : MANAGE_MESSAGE**')
+		if(!message.member.hasPermission("ADMINISTRATOR"))return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**')
+        if(!message.guild.me.hasPermission("MANAGE_MESSAGE")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permissions : MANAGE_MESSAGE**')
         message.delete()
 
         let text = message.content.replace(`${messageArry[0]}`, '')

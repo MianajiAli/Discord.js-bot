@@ -13,15 +13,15 @@ module.exports = {
 		if(prefix === null) prefix = default_prefix;
 
 		if (!message.member.hasPermission("MANAGE_EMOJIS")) {
-            return message.channel.send(`<a:alert:995652726543355975> **You can not use this command | Permission: MANAGE_EMOJIS**`)
+            return message.channel.send(`<:pepeno:997843592955580466> **You can not use this command | Permission: MANAGE_EMOJIS**`)
         }
-        if(!message.guild.me.hasPermission("MANAGE_EMOJIS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions**')
+        if(!message.guild.me.hasPermission("MANAGE_EMOJIS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions**')
 let emojis = await fetch("https://emoji.gg/api/").then(res => res.json());
      const q = args.join(" ").toLowerCase().trim().split(" ").join("_");
      let matches = emojis.filter(s => s.title == q || s.title.includes(q));
      
      let noResult = new Discord.MessageEmbed()
-        .setDescription(`<a:alert:995652726543355975> **No Results found for ${args.join(" ")}**`)
+        .setDescription(`<:pepeno:997843592955580466> **No Results found for ${args.join(" ")}**`)
         .setColor(colors.main)
      
      if (!matches.length) return message.channel.send(noResult)
@@ -85,18 +85,18 @@ rmsg.reactions.resolve(reaction.emoji.name).users.remove(message.author.id).catc
         message.channel.stopTyping();
        } catch {
         message.channel.stopTyping();
-        message.channel.send(`<a:alert:995652726543355975> **Unable to add ${res.title}**`);
+        message.channel.send(`<:pepeno:997843592955580466> **Unable to add ${res.title}**`);
         rmsg.reactions.resolve(reaction.emoji.name).users.remove(message.author.id).catch(err => {})
         doing = false;
         break;
        }
-       message.channel.send(`<a:verify:995645296736481320> **Successfully added ${created}**`);
+       message.channel.send(`<:peppoyes:997843596290052177> **Successfully added ${created}**`);
       rmsg.reactions.resolve(reaction.emoji.name).users.remove(message.author.id).catch(err => {})
        doing = false;
        break;
  
      } else if (reaction.emoji.name == emojis[3]) {
-       message.channel.send("<a:alert:995652726543355975> **Cancelled command**");
+       message.channel.send("<:pepeno:997843592955580466> **Cancelled command**");
        msg.reactions.removeAll();
        return;
      }};

@@ -7,7 +7,7 @@ module.exports = {
   run : async (client, message, args) => {
       const user = message.mentions.users.first();
 	  if(!user) {
-		  return message.channel.send('<a:no:863733318809812992> **Please mention a user**')
+		  return message.channel.send('<:pepeno:997843592955580466> **Please mention a user**')
 	  }
       let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
       let avatar1 = user.displayAvatarURL({ dynamic: false, format: 'png' });

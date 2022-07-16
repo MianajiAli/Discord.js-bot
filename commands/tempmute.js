@@ -8,8 +8,8 @@ module.exports = {
     name: "tempmute",
 
     async run (client, message, args) {
-		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('<a:alert:995652726543355975> **You can not use this command | Permission: ADMINISTRATOR**')
-		if(!message.guild.me.hasPermission("MUTE_MEMBERS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions | Permission : MUTE_MEMBERS**')
+		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**')
+		if(!message.guild.me.hasPermission("MUTE_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MUTE_MEMBERS**')
 		
         let user = message.mentions.members.first();
         let time = args[1]
@@ -17,9 +17,9 @@ module.exports = {
         let mutedrole =  message.guild.roles.cache.find(r => r.name === "Muted")
     
          
-        if(!user) return message.channel.send("<a:alert:995652726543355975> **You need mention a member**");
-        if(!time) return message.channel.send("<a:alert:995652726543355975> **You need declare the time of the mute**");
-        if(!reason) return message.channel.send("<a:alert:995652726543355975> **You need declare the reason of the mute**")
+        if(!user) return message.channel.send("<:pepeno:997843592955580466> **You need mention a member**");
+        if(!time) return message.channel.send("<:pepeno:997843592955580466> **You need declare the time of the mute**");
+        if(!reason) return message.channel.send("<:pepeno:997843592955580466> **You need declare the reason of the mute**")
 		if(!mutedrole){
 			try{
 			  mutedrole = await message.guild.roles.create({
@@ -36,7 +36,7 @@ module.exports = {
         
         user.roles.add(mutedrole);
 
-		message.react('<a:verify:995645296736481320>')
+		message.react('<:peppoyes:997843596290052177>')
 
         setTimeout(function(){
 			const unmute = new Discord.MessageEmbed()
@@ -57,7 +57,7 @@ module.exports = {
 		.addField('Time', `**${time}**`)
 
 		let mChannel = db.fetch(`modlog_${message.guild.id}`)
-		if(!mChannel) return message.channel.send('<a:alert:995652726543355975> **Log channel is not setup, make sure to set a channel as a log channel using ``modlog`` command**')         .then(msg => {
+		if(!mChannel) return message.channel.send('<:pepeno:997843592955580466> **Log channel is not setup, make sure to set a channel as a log channel using ``modlog`` command**')         .then(msg => {
 			msg.delete({timeout: 5000})
 		})
 		let muteChannel = message.guild.channels.cache.get(mChannel)

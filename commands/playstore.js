@@ -10,7 +10,7 @@ module.exports = {
     async run (client, message, args) {
 		if (!args[0])
       return message.channel.send(
-        `<a:alert:995652726543355975> **Please Give Something To Search**`
+        `<:pepeno:997843592955580466> **Please Give Something To Search**`
       );
 
     PlayStore.search({
@@ -23,7 +23,7 @@ module.exports = {
         App = JSON.parse(JSON.stringify(Data[0]));
       } catch (error) {
         return message.channel.send(
-          `<a:alert:995652726543355975> **No Application Found**`
+          `<:pepeno:997843592955580466> **No Application Found**`
         );
       }
 

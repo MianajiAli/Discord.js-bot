@@ -8,11 +8,11 @@ module.exports = {
 
     async run (client, message, args) {
 		if(!message.member.hasPermission("ADMINISTRATOR")) {
-			return message.channel.send("<a:alert:995652726543355975> **You can not use this command | Permission: ADMINISTRATOR**")
+			return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**")
 		  }
 		  
 			db.delete(`emmsg_${message.guild.id}`)
-		   return await message.channel.send("<a:verify:995645296736481320> **Reseted embed welcome message**")
+		   return await message.channel.send("<:peppoyes:997843596290052177> **Reseted embed welcome message**")
 		  
 	}
 }

@@ -9,29 +9,29 @@ module.exports = {
     async run (client, message, args) {
 		var embedColor = '0x5D40F2' 
 		
-		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('<a:alert:995652726543355975> **You can not use this command | Permission: ADMINISTRATOR**')
-		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
+		if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**')
+		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
 		
 	  
 		  const user = message.mentions.members.first();
 	  
 		  if (!user) {
 			return message.channel.send(
-			  "<a:alert:995652726543355975> **Please mention a user**"
+			  "<:pepeno:997843592955580466> **Please mention a user**"
 			);
 		  }
 	  
 		  if (message.mentions.users.first().bot) {
-			return message.channel.send("<a:alert:995652726543355975> **You can not warn bots**");
+			return message.channel.send("<:pepeno:997843592955580466> **You can not warn bots**");
 		  }
 	  
 		  if (message.author.id === user.id) {
-			return message.channel.send("<a:alert:995652726543355975> **You can not warn yourself -_-**");
+			return message.channel.send("<:pepeno:997843592955580466> **You can not warn yourself -_-**");
 		  }
 	  
 		  if (user.id === message.guild.owner.id) {
 			return message.channel.send(
-			  "<a:alert:995652726543355975> **Bruh, you can not warn server owner -_-**"
+			  "<:pepeno:997843592955580466> **Bruh, you can not warn server owner -_-**"
 			);
 		  }
 	  
@@ -39,11 +39,11 @@ module.exports = {
 	  
 		  if (!reason) {
 			return message.channel.send(
-			  "<a:alert:995652726543355975> **Please provide reason to warn**"
+			  "<:pepeno:997843592955580466> **Please provide reason to warn**"
 			);
 		  }
 
-		  message.react('<a:verify:995645296736481320>')
+		  message.react('<:peppoyes:997843596290052177>')
 	  
 		  let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
 	  
@@ -60,7 +60,7 @@ module.exports = {
 
 			var warnSuccessfulEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
-			.setDescription(`<a:verify:995645296736481320> **User Successfully Warned**`)
+			.setDescription(`<:peppoyes:997843596290052177> **User Successfully Warned**`)
 			.addField('Warned by', `${message.author}`)
 			.addField('Reason', `**${reason}**`)
 			let mChannel = db.fetch(`modlog_${message.guild.id}`)
@@ -83,7 +83,7 @@ module.exports = {
 			
 			var warnSuccessfulEmbed = new Discord.MessageEmbed()
 			.setColor(embedColor)
-			.setDescription(`<a:verify:995645296736481320> **User Successfully Warned**`)
+			.setDescription(`<:peppoyes:997843596290052177> **User Successfully Warned**`)
 			.addField('Warned by', `${message.author}`)
 			.addField('Reason', `**${reason}**`)
 

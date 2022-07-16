@@ -16,7 +16,7 @@ module.exports = {
             response = await axios.get(url);
             data = response.data;
         } catch (e) {
-            return message.channel.send(`**<a:alert:995652726543355975> Please type binary text for me to decoded**`)
+            return message.channel.send(`**<:pepeno:997843592955580466> Please type binary text for me to decoded**`)
         }
 
         const embed = new MessageEmbed()

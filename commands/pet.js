@@ -8,7 +8,7 @@ run:async (client, message, args) => {
 let mypetpet = await pet(message.author.displayAvatarURL({ format: "png" }));
 let mypetpet_gif = new Discord.MessageAttachment(mypetpet, "pet.gif");
 
-if(!args[0]) return message.channel.send("<a:no:863733318809812992> **Mention a user or put an emoji from the server**", mypetpet_gif)
+if(!args[0]) return message.channel.send("<:pepeno:997843592955580466> **Mention a user or put an emoji from the server**", mypetpet_gif)
 
    const user =
      message.mentions.users.first() ||

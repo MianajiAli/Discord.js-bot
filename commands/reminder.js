@@ -13,8 +13,8 @@ module.exports = {
         let reason = args.slice(1).join(' ');
     
          
-        if(!time) return message.channel.send("<a:alert:995652726543355975> **Please specify an time**");
-        if(!reason) return message.channel.send("<a:alert:995652726543355975> **Please specify an name for reminder**")
+        if(!time) return message.channel.send("<:pepeno:997843592955580466> **Please specify an time**");
+        if(!reason) return message.channel.send("<:pepeno:997843592955580466> **Please specify an name for reminder**")
 
 		const embed = new Discord.MessageEmbed()
 		.setDescription(`**I will remind you in \`${time}\`**`)

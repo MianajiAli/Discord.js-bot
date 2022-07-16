@@ -48,7 +48,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(f);
             let title = await message.channel.awaitMessages(filter, options);
-            if (title.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled')
+            if (title.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled')
             if (title.first().content !== 'skip' && title.first().content !== 'cancel') embed.setTitle(title.first().content);
 
             //===============================================================================================
@@ -59,7 +59,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(v);
             let Author = await message.channel.awaitMessages(filter, options);
-            if (Author.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled')
+            if (Author.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled')
             if (Author.first().content !== 'skip' && Author.first().content !== 'cancel') embed.setAuthor(Author.first().content);
     
             //===============================================================================================
@@ -70,7 +70,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(d);
             let Description = await message.channel.awaitMessages(filter, options);
-            if (Description.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled')
+            if (Description.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled')
             if (Description.first().content !== 'skip' && Description.first().content !== 'cancel') embed.setDescription(Description.first().content);
     
             //===============================================================================================
@@ -84,7 +84,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(s);
             let Thumbnail = await message.channel.awaitMessages(filter, options);
-            if (Thumbnail.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled ')
+            if (Thumbnail.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled ')
             if (Thumbnail.first().content !== 'skip' && Thumbnail.first().content !== 'cancel') embed.setThumbnail(Thumbnail.first().content); 
 
             //===============================================================================================
@@ -95,7 +95,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(a);
             let Image = await message.channel.awaitMessages(filter, options);
-            if (Image.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled ')
+            if (Image.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled ')
             if (Image.first().content !== 'skip' && Image.first().content !== 'cancel') embed.setImage(Image.first().content); 
     
             //===============================================================================================
@@ -106,7 +106,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(w);
             let Color = await message.channel.awaitMessages(filter, options);
-            if (Color.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled')
+            if (Color.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled')
             if (Color.first().content !== 'skip' && Color.first().content !== 'cancel') embed.setColor(Color.first().content.toUpperCase() || "2f3136")
 
             //===============================================================================================
@@ -117,7 +117,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(q);
             let Footer = await message.channel.awaitMessages(filter, options);
-            if (Footer.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled ')
+            if (Footer.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled ')
             if (Footer.first().content !== 'skip' && Footer.first().content !== 'cancel') embed.setFooter(Footer.first().content); 
     
             //===============================================================================================
@@ -128,7 +128,7 @@ module.exports = {
             .setColor(colors.main)
             message.channel.send(e);
             let TimeStamp = await message.channel.awaitMessages(filter, options);
-            if (TimeStamp.first().content == 'cancel') return message.channel.send('<a:alert:995652726543355975> **Embed Cancelled**')
+            if (TimeStamp.first().content == 'cancel') return message.channel.send('<:pepeno:997843592955580466> **Embed Cancelled**')
             if (TimeStamp.first().content !== 'yes') embed.setTimestamp();
     
             embedch.send(embed)

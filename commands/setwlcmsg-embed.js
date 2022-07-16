@@ -8,16 +8,16 @@ module.exports = {
 
     async run (client, message, args) {
 		if(!message.member.hasPermission("ADMINISTRATOR")) {
-			return message.channel.send("<a:alert:995652726543355975> **You can not use this command | Permission: ADMINISTRATOR**")
+			return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**")
 		  }
 		  
 			if(!args[0]) {
-			return message.channel.send("<a:alert:995652726543355975> **Please give the message to set**")
+			return message.channel.send("<:pepeno:997843592955580466> **Please give the message to set**")
 		  }
 		  
 		  let msg = args.slice(0).join(" ")
 		  
 		  db.set(`emmsg_${message.guild.id}`, `${msg}`)
-		await message.channel.send(`<a:verify:995645296736481320> **Embed welcome message seted to ${msg}**`)
+		await message.channel.send(`<:peppoyes:997843596290052177> **Embed welcome message seted to ${msg}**`)
 	}
 }

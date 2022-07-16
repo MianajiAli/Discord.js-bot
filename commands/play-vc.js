@@ -9,9 +9,9 @@ module.exports = {
 
     async run (client, message, args) {
 		const channel = message.member.voice.channel;
-        if(!channel) return message.channel.send('<a:no:863733318809812992> **Please join a voice channel**');
+        if(!channel) return message.channel.send('<:pepeno:997843592955580466> **Please join a voice channel**');
 
-		if(!fs.existsSync(`./recorded-voices/recorded-${message.author.tag}.pcm`)) return message.channel.send('<a:no:863733318809812992> **Your audio is not recorded**')
+		if(!fs.existsSync(`./recorded-voices/recorded-${message.author.tag}.pcm`)) return message.channel.send('<:pepeno:997843592955580466> **Your audio is not recorded**')
 
 		const connection = await message.member.voice.channel.join();
 		const stream = fs.createReadStream(`./recorded-voices/recorded-${message.author.tag}.pcm`)
@@ -23,7 +23,7 @@ module.exports = {
 
 		dispatcher.on('finish', () => {
 			message.member.voice.channel.leave();
-			message.channel.send('<a:verify:995645296736481320> **Finished playing audio**')
+			message.channel.send('<:peppoyes:997843596290052177> **Finished playing audio**')
 		});
 
 

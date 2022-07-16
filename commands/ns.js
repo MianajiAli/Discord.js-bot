@@ -33,7 +33,7 @@ function myLoop() {         //  create a loop function
 myLoop();  
 
 		  } else {
-			message.channel.send("<a:alert:995652726543355975> **This isn't NSFW channel**")
+			message.channel.send("<:pepeno:997843592955580466> **This isn't NSFW channel**")
 		}
 	}
 }

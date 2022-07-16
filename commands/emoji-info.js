@@ -17,7 +17,7 @@ module.exports = {
     }
  
     let auth = emoji.author;
-	if(!message.guild.me.hasPermission("MANAGE_EMOJIS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions | Permission : MANAGE_EMOJIS**')
+	if(!message.guild.me.hasPermission("MANAGE_EMOJIS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_EMOJIS**')
     const embed = new MessageEmbed()
       .setTitle(emoji.name + "Info")
       .setThumbnail(emoji.url)

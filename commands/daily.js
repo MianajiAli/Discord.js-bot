@@ -10,7 +10,7 @@ module.exports = {
 		let target = db.get(`userb_${message.author.id}`);
 
 		const ban_error = new Discord.MessageEmbed()
-		.setDescription('<a:no:863733318809812992> **You are banned from using this section**')
+		.setDescription('<:pepeno:997843592955580466> **You are banned from using this section**')
 		.setColor(colors.main)
 
 		if(target) {
@@ -34,16 +34,16 @@ module.exports = {
 					secs = pad_zero(timeObj.seconds).padStart(2, "0");
 	
 				let finalTime = `**${hours}:${mins}:${secs}**`;
-				return message.channel.send(`<a:alert:995652726543355975> **You already collected your daily reward**`);
+				return message.channel.send(`<:pepeno:997843592955580466> **You already collected your daily reward**`);
 			} else {
 				db.add(`money_${message.author.id}`, amount)
 	        	db.set(`daily_${message.author.id}`, Date.now())
-				return message.channel.send(`<a:verify:995645296736481320> **Great ${message.author.tag} You've been received 500 DB Coin 🪙**`);
+				return message.channel.send(`<:peppoyes:997843596290052177> **Great ${message.author.tag} You've been received 500 DB Coin 🪙**`);
 			}
 	
 		} catch (error) {
 			console.log(error);
-			return message.channel.send(`<a:alert:995652726543355975> **Oopsie, unknown error I guess: ${error}**`);
+			return message.channel.send(`<:pepeno:997843592955580466> **Oopsie, unknown error I guess: ${error}**`);
 		}
 	}
 }

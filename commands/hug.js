@@ -7,7 +7,7 @@ module.exports = {
 
     async run (client, message, args) {
 		if (message.channel.nsfw === false) {
-			if (!message.mentions.users.first()) return message.reply("<a:alert:995652726543355975> **You need to mention the user**");
+			if (!message.mentions.users.first()) return message.reply("<:pepeno:997843592955580466> **You need to mention the user**");
 			const { body } = await superagent
 			.get("https://nekos.life/api/hug");
 				const hug = new Discord.MessageEmbed()

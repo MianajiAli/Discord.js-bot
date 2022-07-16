@@ -8,24 +8,24 @@ module.exports = {
 
     async run (client, message, args) {
 		if (!message.member.hasPermission("ADMINISTRATOR")) {
-			return message.channel.send("<a:alert:995652726543355975> **You can not use this command | Permission: ADMINISTRATOR**");
+			return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**");
 		  }
 		  if (!message.guild.me.hasPermission("MUTE_MEMBERS")) {
-			return message.channel.send("<a:alert:995652726543355975> **I do not have the correct permissions | Permission : MUTE_MEMBERS**");
+			return message.channel.send("<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MUTE_MEMBERS**");
 		  }
 	  
 		  const user = message.mentions.members.first();
 	  
 		  if (!user) {
-			return message.channel.send("<a:alert:995652726543355975> **Please mention the user for mute**");
+			return message.channel.send("<:pepeno:997843592955580466> **Please mention the user for mute**");
 		  }
 		  if (user.id === message.author.id) {
-			return message.channel.send("<a:alert:995652726543355975> **I can't mute you because you are message author**");
+			return message.channel.send("<:pepeno:997843592955580466> **I can't mute you because you are message author**");
 		  }
 		  let reason = args.slice(1).join("");
 	  
 		  if (!reason) {
-			return message.channel.send("<a:alert:995652726543355975> **Please give some reason for mute** ");
+			return message.channel.send("<:pepeno:997843592955580466> **Please give some reason for mute** ");
 		  }
 		  
 	  
@@ -49,7 +49,7 @@ module.exports = {
 		  
 		  await user.roles.remove(vrole);
 		  await user.roles.add(muterole);
-		  message.react('<a:verify:995645296736481320>')
+		  message.react('<:peppoyes:997843596290052177>')
 		  
 		const mute = new Discord.MessageEmbed()
 		.setTitle('User Mute')

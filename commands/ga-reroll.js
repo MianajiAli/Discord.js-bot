@@ -4,11 +4,11 @@ module.exports = {
   name: "reroll",
     run: async (client, message, args) => {
 		if(!message.member.hasPermission('MANAGE_MESSAGES')) {
-			return message.channel.send('<a:alert:995652726543355975> **You can not use this command | Permission: MANAGE_MESSAGES**');
+			return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: MANAGE_MESSAGES**');
 		}
 
     if(!args[0]){
-        return message.channel.send('<a:alert:995652726543355975> **You have to specify a valid message ID**');
+        return message.channel.send('<:pepeno:997843592955580466> **You have to specify a valid message ID**');
     }
 
     let giveaway = 
@@ -19,12 +19,12 @@ module.exports = {
 
 
     if(!giveaway){
-        return message.channel.send(`<a:alert:995652726543355975> **Unable to find a giveaway for ${args.join(' ')}**`);
+        return message.channel.send(`<:pepeno:997843592955580466> **Unable to find a giveaway for ${args.join(' ')}**`);
     }
 
     client.giveawaysManager.reroll(giveaway.messageID)
     .then(() => {
-        message.channel.send('<a:verify:995645296736481320> **Giveaway rerolled**');
+        message.channel.send('<:peppoyes:997843596290052177> **Giveaway rerolled**');
     })
     .catch((e) => {
         if(e.startsWith(`**Giveaway with message ID ${giveaway.messageID} is not ended**`)){

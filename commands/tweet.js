@@ -14,11 +14,11 @@ module.exports = {
 
 
         if(!user){
-            return message.edit("<a:alert:995652726543355975> **You Have To Enter Someone's Twitter Nickname**");
+            return message.edit("<:pepeno:997843592955580466> **You Have To Enter Someone's Twitter Nickname**");
         }
 
         if(!text){
-            return message.edit("<a:alert:995652726543355975> **You must enter a message**");
+            return message.edit("<:pepeno:997843592955580466> **You must enter a message**");
         }
 
         try {
@@ -28,7 +28,7 @@ module.exports = {
             await message.channel.send(``, attachment);
             message.delete({ timeout: 5000});
         } catch(e){
-            message.edit("<a:alert:995652726543355975> **Error, Try Again**");
+            message.edit("<:pepeno:997843592955580466> **Error, Try Again**");
         }
 	}
 }

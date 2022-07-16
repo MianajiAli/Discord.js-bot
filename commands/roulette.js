@@ -26,15 +26,15 @@ module.exports = {
 
         let moneyhelp = new MessageEmbed()
             .setColor(color.main)
-            .setDescription(`<a:alert:995652726543355975> **Specify an amount to gamble**`);
+            .setDescription(`<:pepeno:997843592955580466> **Specify an amount to gamble**`);
 
         let moneymore = new MessageEmbed()
             .setColor(color.main)
-            .setDescription(`<a:alert:995652726543355975> **You are betting more than you have**`);
+            .setDescription(`<:pepeno:997843592955580466> **You are betting more than you have**`);
 
         let colorbad = new MessageEmbed()
             .setColor(color.main)
-            .setDescription(`<a:alert:995652726543355975> **Specify a color, Red [1.5x], Black [2x], Green [15x]**`);
+            .setDescription(`<:pepeno:997843592955580466> **Specify a color, Red [1.5x], Black [2x], Green [15x]**`);
 
         if (!colour) return message.channel.send(colorbad);
         colour = colour.toLowerCase()
@@ -71,7 +71,7 @@ module.exports = {
             db.subtract(`money_${user.id}`, money)
             let moneyEmbed4 = new MessageEmbed()
                 .setColor(color.main)
-                .setDescription(`<a:alert:995652726543355975> **You lost ${money} 🪙**\n\n **Multiplier : 0x**`);
+                .setDescription(`<:pepeno:997843592955580466> **You lost ${money} 🪙**\n\n **Multiplier : 0x**`);
             message.channel.send(moneyEmbed4)
         }
           db.add(`money_${message.author.id}`, 1)

@@ -10,13 +10,13 @@ module.exports = {
 		let pr = message.author.id==owner;
 
 		if(!pr) {
-			return message.channel.send('<a:alert:995652726543355975> **This is only owner command**')
+			return message.channel.send('<:pepeno:997843592955580466> **This is only owner command**')
 		}
 		
 		let target = db.get(`userb_${message.author.id}`);
 
 		const ban_error = new Discord.MessageEmbed()
-		.setDescription('<a:no:863733318809812992> **You are banned from using this section**')
+		.setDescription('<:pepeno:997843592955580466> **You are banned from using this section**')
 		.setColor(color.main)
 
 		if(target) {
@@ -25,7 +25,7 @@ module.exports = {
 		
 		let user = message.mentions.members.first() || message.author
 	
-		if (isNaN(args[0])) return message.channel.send(`<a:alert:995652726543355975> **That was not a valid number**`) // if args[0] (first input) is not a number, return.
+		if (isNaN(args[0])) return message.channel.send(`<:pepeno:997843592955580466> **That was not a valid number**`) // if args[0] (first input) is not a number, return.
 		db.subtract(`money_${user.id}`, args[0]) // subtract it now
 		let bal = await db.fetch(`money_${user.id}`)
 	

@@ -10,12 +10,12 @@ module.exports = {
 		let prefix = await db.get(`prefix_${message.guild.id}`);
 		if(prefix === null) prefix = default_prefix;
 
-		if(!message.guild.me.hasPermission("MOVE_MEMBERS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions | Permission : MOVE_MEMBERS**')
+		if(!message.guild.me.hasPermission("MOVE_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MOVE_MEMBERS**')
 
 		if(message.channel.name.includes('ticket-')) {
 			const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username === args.slice(0).join(' ') || x.user.username === args[0]);
 			if(!member) {
-				return message.channel.send(`**<a:alert:995652726543355975> Incorrect Usage, Correct Usage : ${prefix}add <member>**`);
+				return message.channel.send(`**<:pepeno:997843592955580466> Incorrect Usage, Correct Usage : ${prefix}add <member>**`);
 			}
 			try{
 				message.channel.updateOverwrite(member.user, {
@@ -24,11 +24,11 @@ module.exports = {
 					ATTACH_FILES: true,
 					READ_MESSAGE_HISTORY: true,
 				}).then(() => {
-					message.channel.send(`<a:verify:995645296736481320> **Successfully added ${member} to ${message.channel}**`);
+					message.channel.send(`<:peppoyes:997843596290052177> **Successfully added ${member} to ${message.channel}**`);
 				});
 			}
 			catch(e) {
-				return message.channel.send('<a:alert:995652726543355975> **An error occurred, please try again**');
+				return message.channel.send('<:pepeno:997843592955580466> **An error occurred, please try again**');
 			}
 		}
 	}

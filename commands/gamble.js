@@ -10,7 +10,7 @@ module.exports = {
 		let target = db.get(`userb_${message.author.id}`);
 
 		const ban_error = new Discord.MessageEmbed()
-		.setDescription('<a:no:863733318809812992> **You are banned from using this section**')
+		.setDescription('<:pepeno:997843592955580466> **You are banned from using this section**')
 		.setColor(colors.main)
 
 		if(target) {
@@ -24,11 +24,11 @@ module.exports = {
 		const balance = await db.fetch(`money_${user.id}`);
 	
 		if (!amount) return message.channel.send("**Please insert an amount first**");
-		if (isNaN(amount)) return message.channel.send("<a:alert:995652726543355975> **The amount was not a number**");
-		if (amount > balance || !balance || balance === 0) return message.channel.send("<a:alert:995652726543355975> **You don't have enough money**");
+		if (isNaN(amount)) return message.channel.send("<:pepeno:997843592955580466> **The amount was not a number**");
+		if (amount > balance || !balance || balance === 0) return message.channel.send("<:pepeno:997843592955580466> **You don't have enough money**");
 		
 		// Optional:
-		if (amount < 200) return message.channel.send("<a:alert:995652726543355975> **You don't have enough money for gambling. The minimum was $200**");
+		if (amount < 200) return message.channel.send("<:pepeno:997843592955580466> **You don't have enough money for gambling. The minimum was $200**");
 	
 		let cooldown = 25000; // 25 Seconds.
 		let pad_zero = num => (num < 10 ? '0' : '') + num;

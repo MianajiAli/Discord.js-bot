@@ -5,10 +5,10 @@ module.exports = {
     name: 'slowmode',
     run: async (client, message, args) => {
 
-        if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send('<a:alert:995652726543355975> **You can not use this command | Permission: MANAGE_CHANNELS**')
-        if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
+        if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: MANAGE_CHANNELS**')
+        if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
         
-        if (!args[0]) return message.channel.send('<a:alert:995652726543355975> **You did not specify a time**')
+        if (!args[0]) return message.channel.send('<:pepeno:997843592955580466> **You did not specify a time**')
 
         const currentCooldown = message.channel.rateLimitPerUser;
 
@@ -29,9 +29,9 @@ module.exports = {
 
         const time = ms(args[0]) / 1000;
 
-        if (isNaN(time)) return message.channel.send('<a:alert:995652726543355975> **Not a valid time, please try again**')
+        if (isNaN(time)) return message.channel.send('<:pepeno:997843592955580466> **Not a valid time, please try again**')
 
-        if (time >= 21600) return message.channel.send('<a:alert:995652726543355975> **That slowmode limit is too high, please enter anything lower than 6 hours**')
+        if (time >= 21600) return message.channel.send('<:pepeno:997843592955580466> **That slowmode limit is too high, please enter anything lower than 6 hours**')
 
         if (currentCooldown === time) return message.channel.send(`**Slowmode is already set to** ${args[0]}`);
 

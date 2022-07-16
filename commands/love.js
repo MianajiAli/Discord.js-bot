@@ -13,8 +13,8 @@ module.exports = {
     const ctx = canvas.getContext("2d")
 
     const target = message.mentions.users.first()
-    if(!target) return message.channel.send("<a:alert:995652726543355975> **Please mention someone**")
-    if(target.id == message.author.id) return message.channel.send("<a:alert:995652726543355975> **Please mention someone else**")
+    if(!target) return message.channel.send("<:pepeno:997843592955580466> **Please mention someone**")
+    if(target.id == message.author.id) return message.channel.send("<:pepeno:997843592955580466> **Please mention someone else**")
 
     const bg = await Canvas.loadImage("https://cdn.discordapp.com/attachments/468141324906921984/868804213520601108/Untitled.png")
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height)

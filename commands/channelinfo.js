@@ -7,7 +7,7 @@ module.exports = {
 
     async run (client, message, args) {
         let channel = message.mentions.channels.first() || client.guilds.cache.get(message.guild.id).channels.cache.get(args[0]) || message.guild.channels.cache.find(r => r.name.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.channel;
-        if (!channel) return message.channel.send("<a:alert:995652726543355975> **Channel Not Found**");
+        if (!channel) return message.channel.send("<:pepeno:997843592955580466> **Channel Not Found**");
 
         const embed = new MessageEmbed()
 		.setTitle(`Channel Information for ${channel.name}`)

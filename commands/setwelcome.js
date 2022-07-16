@@ -8,19 +8,19 @@ module.exports = {
 
     async run (client, message, args) {
 		if (!message.member.hasPermission("ADMINISTRATION")) {
-            return message.channel.send("<a:alert:995652726543355975> **You can not use this command | Permission: ADMINISTRATOR**");
+            return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**");
           }
-          if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions**')
+          if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions**')
           let channel = message.mentions.channels.first()
           
           if(!channel) {
-            return message.channel.send("<a:alert:995652726543355975> **Please Mention the channel first**")
+            return message.channel.send("<:pepeno:997843592955580466> **Please Mention the channel first**")
           }
           
           
           db.set(`welchannel_${message.guild.id}`, channel.id)
           
-          message.channel.send(`<a:verify:995645296736481320> **Welcome Channel is seted as ${channel}**`)
+          message.channel.send(`<:peppoyes:997843596290052177> **Welcome Channel is seted as ${channel}**`)
 
 
 

@@ -12,7 +12,7 @@ module.exports = {
         let target = db.get(`userb_${message.author.id}`);
 
 		const ban_error = new Discord.MessageEmbed()
-		.setDescription('<a:no:863733318809812992> **You are banned from using this section**')
+		.setDescription('<:pepeno:997843592955580466> **You are banned from using this section**')
 		.setColor(color.main)
 
 		if(target) {
@@ -25,15 +25,15 @@ module.exports = {
 
 
     if (!user) {
-        return message.channel.send('<a:alert:995652726543355975> **Please mention a user**')
+        return message.channel.send('<:pepeno:997843592955580466> **Please mention a user**')
     }
-	if(user.id === message.author.id) return message.channel.send('<a:alert:995652726543355975> **You cant rob yourself -_- Bruh**');
+	if(user.id === message.author.id) return message.channel.send('<:pepeno:997843592955580466> **You cant rob yourself -_- Bruh**');
     if (author < 250) { // if the authors balance is less than 250, return this.
-        return message.channel.send('<a:alert:995652726543355975> **You need atleast 250$ to rob somebody**')
+        return message.channel.send('<:pepeno:997843592955580466> **You need atleast 250$ to rob somebody**')
     }
 
     if (targetuser < 0) { // if mentioned user has 0 or less, it will return this.
-        return message.channel.send(`<a:alert:995652726543355975> **${user.user.username} does not have anything to rob**`)
+        return message.channel.send(`<:pepeno:997843592955580466> **${user.user.username} does not have anything to rob**`)
     }
 
     let random = Math.floor(Math.random() * 1000) + 1; // random number 200-1, you can change 200 to whatever you'd like
@@ -42,7 +42,7 @@ module.exports = {
         message.reply("**You have to wait 6 hours**");
 } else {
             let embed = new Discord.MessageEmbed()
-            .setDescription(`<a:verify:995645296736481320> **${message.author} you robbed ${user} and got away with ${random}**`)
+            .setDescription(`<:peppoyes:997843596290052177> **${message.author} you robbed ${user} and got away with ${random}**`)
             .setColor(color.main)
             .setTimestamp()
             message.channel.send(embed)

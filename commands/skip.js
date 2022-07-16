@@ -8,15 +8,15 @@ module.exports = {
             const voice_channel = message.member.voice.channel;
             const embed = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription(`<a:alert:995652726543355975> **You must be in a voice channel to play something**`)
+            .setDescription(`<:pepeno:997843592955580466> **You must be in a voice channel to play something**`)
             if(!client.player.isPlaying(message)) {
-			message.channel.send('<a:alert:995652726543355975> **Something must be playing in order to skip the track**');
+			message.channel.send('<:pepeno:997843592955580466> **Something must be playing in order to skip the track**');
 
 			return;
 		}
 
 		await client.player.skip(message);
 
-		message.channel.send('<a:verify:995645296736481320> **Skipped**');
+		message.channel.send('<:peppoyes:997843596290052177> **Skipped**');
 	},
 };

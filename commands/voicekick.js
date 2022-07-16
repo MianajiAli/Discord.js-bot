@@ -10,26 +10,26 @@ module.exports = {
     async run (client, message, args) {
 		if (!message.guild.me.hasPermission(["KICK_MEMBERS"]))
       return message.channel.send(
-        "<a:alert:995652726543355975> **I dont have a right permission | Permission: KICK_MEMBERS**"
+        "<:pepeno:997843592955580466> **I dont have a right permission | Permission: KICK_MEMBERS**"
       );
 
 	  if (!message.member.hasPermission("KICK_MEMBERS")) {
-		return message.channel.send("<a:alert:995652726543355975> **You can not use this command | Permission: KICK_MEMBERS**");
+		return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: KICK_MEMBERS**");
 	  }
 
     if (!message.mentions.members.first())
       return message.channel.send(
-        `<a:alert:995652726543355975> **Please mention user that you want to kick from voice channel`
+        `<:pepeno:997843592955580466> **Please mention user that you want to kick from voice channel`
       );
 
     let { channel } = message.mentions.members.first().voice;
 
     if (!channel)
-      return message.channel.send(`<a:alert:995652726543355975> **User is not in any voice channel**`);
+      return message.channel.send(`<:pepeno:997843592955580466> **User is not in any voice channel**`);
 
     message.mentions.members.first().voice.kick();
 
-    message.react('<a:verify:995645296736481320>')
+    message.react('<:peppoyes:997843596290052177>')
 
 	let e = new Discord.MessageEmbed()
         .setTitle('User has been kicked from voice channel')

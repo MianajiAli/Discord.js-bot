@@ -10,16 +10,16 @@ module.exports = {
 		let pr = message.author.id==owner;
 
 		if(!pr) {
-			return message.channel.send('<a:alert:995652726543355975> **This is only owner command**')
+			return message.channel.send('<:pepeno:997843592955580466> **This is only owner command**')
 		}
 
 		let user = message.author;
 
 	
-		if (!args[0]) return message.reply('<a:alert:995652726543355975> **Please specify an amount to add**')
-		if (isNaN(args[0])) return message.reply('<a:alert:995652726543355975> **That was not a valid number**')
+		if (!args[0]) return message.reply('<:pepeno:997843592955580466> **Please specify an amount to add**')
+		if (isNaN(args[0])) return message.reply('<:pepeno:997843592955580466> **That was not a valid number**')
 
-		message.channel.send(`<a:verify:995645296736481320> **Successfully added ${args[0]} xp to ${user.tag}**`)
+		message.channel.send(`<:peppoyes:997843596290052177> **Successfully added ${args[0]} xp to ${user.tag}**`)
 
 		db.add(`level_${message.guild.id}_${user.id}`, args[0])
 	}

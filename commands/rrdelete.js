@@ -11,15 +11,15 @@ module.exports = {
 		let prefix = await db.get(`prefix_${message.guild.id}`);
 		if(prefix === null) prefix = default_prefix;
 
-		if(!args[0]) return message.channel.send(`<a:alert:995652726543355975> **${prefix}rrdelete <messageid> <emoji>**`)
+		if(!args[0]) return message.channel.send(`<:pepeno:997843592955580466> **${prefix}rrdelete <messageid> <emoji>**`)
     let channel = await db.get(`rrremove_${message.guild.id}_${args[0]}2`)
     let messageid = await db.get(`rerremove_${message.guild.id}_${args[0]}`)
 
-    if(!channel) return message.channel.send(`<a:alert:995652726543355975> **Message ID Not Found**`)
-    if(!messageid) return message.channel.send(`<a:alert:995652726543355975> **MessageID Not Found**`)
+    if(!channel) return message.channel.send(`<:pepeno:997843592955580466> **Message ID Not Found**`)
+    if(!messageid) return message.channel.send(`<:pepeno:997843592955580466> **MessageID Not Found**`)
     let a = client.channels.cache.get(channel).messages.fetch(args[0])
-   if(!a) return message.channel.send(`<a:alert:995652726543355975> **That's Message ID Is Invaild**`)
-   if(!args[1]) return message.channel.send(`<a:alert:995652726543355975> **${prefix}rrdelete <messageid> <emoji>**`)
+   if(!a) return message.channel.send(`<:pepeno:997843592955580466> **That's Message ID Is Invaild**`)
+   if(!args[1]) return message.channel.send(`<:pepeno:997843592955580466> **${prefix}rrdelete <messageid> <emoji>**`)
    function isCustomEmoji(emoji) {
       return emoji.split(":").length == 1 ? false : true;
     }
@@ -27,10 +27,10 @@ module.exports = {
 
    let customemoji = Discord.Util.parseEmoji(args[1]);
     let emojicheck = client.emojis.cache.find(emoji => emoji.id === `${customemoji.id}`);
-   if(!emojicheck) return message.channel.send(`<a:alert:995652726543355975> **this emoji is invaild**`)
+   if(!emojicheck) return message.channel.send(`<:pepeno:997843592955580466> **this emoji is invaild**`)
 
    let emote = await db.get(`rrremove_${message.guild.id}_${args[0]}_${args[1]}`)
-   if(!emote) return message.channel.send(`<a:alert:995652726543355975> **theres no emojis with ${emojicheck} on ${args[0]}**`)
+   if(!emote) return message.channel.send(`<:pepeno:997843592955580466> **theres no emojis with ${emojicheck} on ${args[0]}**`)
    client.channels.cache.get(channel).messages.fetch(args[0]).then(darkcodes => {
 darkcodes.reactions.cache.get(`${emojicheck.id}`).remove() 
    })

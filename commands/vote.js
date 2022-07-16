@@ -4,7 +4,7 @@ module.exports = {
     name: "vote",
 
     async run (client, message, args) {
-		if (!message.guild.member(client.user).hasPermission('ADD_REACTIONS')) return message.reply('<a:alert:995652726543355975> **I do not have the correct permissions | Permission: ADD_REACTIONS**')
+		if (!message.guild.member(client.user).hasPermission('ADD_REACTIONS')) return message.reply('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission: ADD_REACTIONS**')
 		const sayMessage = args.join(" ");
 		if (sayMessage.length < 1) return message.channel.send("Write something")
 	  const embed = new Discord.MessageEmbed()
@@ -14,8 +14,8 @@ module.exports = {
 	   .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 	   .setTimestamp()
 		message.channel.send({embed}).then(m => {
-		   m.react('<a:verify:995645296736481320>');
-		   m.react('<a:alert:995652726543355975>');
+		   m.react('<:peppoyes:997843596290052177>');
+		   m.react('<:pepeno:997843592955580466>');
 		})   
 	}
 }	 

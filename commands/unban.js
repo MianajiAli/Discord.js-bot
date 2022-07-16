@@ -8,18 +8,18 @@ module.exports = {
 
     async run (client, message, args) {
         
-        if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('<a:alert:995652726543355975> **You can not use this command | Permission: BAN_MEMBERS**')
-        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('<a:alert:995652726543355975> **I do not have the correct permissions | Permission : BAN_MEMBERS**')
+        if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: BAN_MEMBERS**')
+        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : BAN_MEMBERS**')
 
 		  
 		  let userID = args[0]
-		  if (isNaN(userID)) return message.reply(`<a:alert:995652726543355975> **Please specify an ID**`);
+		  if (isNaN(userID)) return message.reply(`<:pepeno:997843592955580466> **Please specify an ID**`);
 			message.guild.fetchBans().then(bans=> {
-			if(bans.size == 0) return message.channel.send('<a:alert:995652726543355975> **No one is banned in this server**')
+			if(bans.size == 0) return message.channel.send('<:pepeno:997843592955580466> **No one is banned in this server**')
 			let bUser = bans.find(b => b.user.id == userID)
-			if(!bUser) return message.channel.send('<a:alert:995652726543355975> **User not found**')
+			if(!bUser) return message.channel.send('<:pepeno:997843592955580466> **User not found**')
 			message.guild.members.unban(bUser.user)
-			message.react('<a:verify:995645296736481320>')
+			message.react('<:peppoyes:997843596290052177>')
 
 			const e = new Discord.MessageEmbed()
                 .setAuthor(`User has been unbanned`, message.guild.iconURL())

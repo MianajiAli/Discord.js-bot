@@ -51,7 +51,7 @@ client.on("ready", () => {
       client.user.displayAvatarURL({ format: "png", dynamic: true, size: 1024 })
     )
     .setDescription(
-      `<a:verify:995645296736481320> **Serving ${user} users in ${guild} servers and ${channel} channels**`
+      `<:peppoyes:997843596290052177> **Serving ${user} users in ${guild} servers and ${channel} channels**`
     )
     .setColor(colors.main)
     .setFooter(
@@ -495,13 +495,13 @@ client.on('messageReactionAdd', async (reaction, user) => {
   reaction.message.guild.members.fetch(user).then(member => {
     let embed = new Discord.MessageEmbed()
     .setAuthor(user.username , user.displayAvatarURL())
-    .setDescription(`<a:alert:995652726543355975> **It's Looks You Already Have ${reaction.message.guild.roles.cache.get(role).name}** `)
+    .setDescription(`<:pepeno:997843592955580466> **It's Looks You Already Have ${reaction.message.guild.roles.cache.get(role).name}** `)
     .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
     .setColor(colors.main)
     if(member.roles.cache.has(role)) return user.send(embed)
     let sucsses = new Discord.MessageEmbed()
     .setAuthor(user.username, user.displayAvatarURL())
-    .setDescription(`<a:verify:995645296736481320> **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
+    .setDescription(`<:peppoyes:997843596290052177> **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
     .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
     .setColor(colors.main)
 
@@ -527,13 +527,13 @@ if(reaction.message.id == messageid && reaction.emoji.name == `${emote}`) {
 reaction.message.guild.members.fetch(user).then(member => {
   let embed = new Discord.MessageEmbed()
   .setAuthor(user.username , user.displayAvatarURL())
-  .setDescription(`<a:alert:995652726543355975> **It's Looks You Already Have ${reaction.message.guild.roles.cache.get(role).name}** `)
+  .setDescription(`<:pepeno:997843592955580466> **It's Looks You Already Have ${reaction.message.guild.roles.cache.get(role).name}** `)
   .setFooter(reaction.message.guild.name , reaction.message.guild.iconURL())
   .setTimestamp()
   if(member.roles.cache.has(role)) return user.send(embed)
   let sucsses = new Discord.MessageEmbed()
   .setAuthor(user.username, user.displayAvatarURL())
-  .setDescription(`<a:verify:995645296736481320> **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
+  .setDescription(`<:peppoyes:997843596290052177> **${reaction.message.guild.roles.cache.get(role).name}** Has Been added to you on ${reaction.message.guild.name}`)
   .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
   .setColor(colors.main)
 
@@ -561,7 +561,7 @@ if(!role) return;
 
  let embed = new Discord.MessageEmbed()
  .setAuthor(user.username , user.displayAvatarURL())
- .setDescription(`<a:verify:995645296736481320> **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
+ .setDescription(`<:peppoyes:997843596290052177> **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
  .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
  .setColor(colors.main)
  user.send(embed)
@@ -588,7 +588,7 @@ if(!role) return;
   
  let embed = new Discord.MessageEmbed()
  .setAuthor(user.username , user.displayAvatarURL())
- .setDescription(`<a:verify:995645296736481320> **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
+ .setDescription(`<:peppoyes:997843596290052177> **${reaction.message.guild.roles.cache.get(role).name}** Role Removed From You`)
  .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
  .setColor(colors.main)
  user.send(embed)
