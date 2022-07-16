@@ -76,16 +76,16 @@ module.exports = {
 		if (oc === null) oc = 0;
 		if (mansion === null) mansion = 0;
 		if (castle === null) castle = 0;
-		if (ghost === null) ghost = `<:pepeno:997843592955580466>`;
-		if (ninja === null) ninja = `<:pepeno:997843592955580466>`;
-		if (mind === null) mind = `<:pepeno:997843592955580466>`;
-		if (invis === null) invis = `<:pepeno:997843592955580466>`;
-		if (copper === null) copper = `<:pepeno:997843592955580466>`;
-		if (bronze === null) bronze = `<:pepeno:997843592955580466>`;
-		if (silver === null) silver = `<:pepeno:997843592955580466>`;
-		if (gold === null) gold = `<:pepeno:997843592955580466>`;
-		if (diamond === null) diamond = `<:pepeno:997843592955580466>`;
-		if (immortal === null) immortal = `<:pepeno:997843592955580466>`;
+		if (ghost === null) ghost = `<a:no:997879343999111280>`;
+		if (ninja === null) ninja = `<a:no:997879343999111280>`;
+		if (mind === null) mind = `<a:no:997879343999111280>`;
+		if (invis === null) invis = `<a:no:997879343999111280>`;
+		if (copper === null) copper = `<a:no:997879343999111280>`;
+		if (bronze === null) bronze = `<a:no:997879343999111280>`;
+		if (silver === null) silver = `<a:no:997879343999111280>`;
+		if (gold === null) gold = `<a:no:997879343999111280>`;
+		if (diamond === null) diamond = `<a:no:997879343999111280>`;
+		if (immortal === null) immortal = `<a:no:997879343999111280>`;
 		if (bal === null) bal = 0;
 
 		const embed = new Discord.MessageEmbed()

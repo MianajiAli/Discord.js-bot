@@ -13,7 +13,7 @@ module.exports = {
         let reason = args.slice(1).join(' ');
     
          
-        if(!time) return message.channel.send("<:pepeno:997843592955580466> **Please specify an time**");
+        if(!time) return message.channel.send("<a:no:997879343999111280> **Please specify an time**");
 
 		const embed = new Discord.MessageEmbed()
 		.setDescription(`**You are now AFK**`)

@@ -16,7 +16,7 @@ module.exports = {
             response = await axios.get(url);
             data = response.data;
         } catch (e) {
-            return message.channel.send(`**<:pepeno:997843592955580466> Please type something for me**`)
+            return message.channel.send(`**<a:no:997879343999111280> Please type something for me**`)
         }
 
         const embed = new MessageEmbed()

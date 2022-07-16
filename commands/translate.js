@@ -19,7 +19,7 @@ module.exports = {
 			.setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }));
 			message.channel.send(embed); 
 		  }).catch(err => {
-			message.channel.send("<:pepeno:997843592955580466> **Please provide a valid ISO language code \n Example : fa, en, ar, fr ...**")
+			message.channel.send("<a:no:997879343999111280> **Please provide a valid ISO language code \n Example : fa, en, ar, fr ...**")
 		  });
 	}
 }

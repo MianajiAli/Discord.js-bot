@@ -8,11 +8,11 @@ module.exports = {
 
     async run (client, message, args) {
 		if(!message.member.hasPermission("ADMINISTRATOR")) {
-			return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**")
+			return message.channel.send("<a:no:997879343999111280> **You can not use this command | Permission: ADMINISTRATOR**")
 		  }
 		  
 			db.delete(`wlctextch_${message.guild.id}`)
-		   return await message.channel.send("<:peppoyes:997843596290052177> **Reseted text welcome channel**")
+		   return await message.channel.send("<a:yes:997879349170684064> **Reseted text welcome channel**")
 		  
 	}
 }

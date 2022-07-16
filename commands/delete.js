@@ -15,7 +15,7 @@ module.exports = {
 			message.channel.delete();
 		}
 		else {
-			return message.reply('<:pepeno:997843592955580466> **You cannot use this command here, Please use this command when you want to delete a ticket**');
+			return message.reply('<a:no:997879343999111280> **You cannot use this command here, Please use this command when you want to delete a ticket**');
 		}
 	}
 }

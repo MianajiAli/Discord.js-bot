@@ -6,15 +6,15 @@ module.exports = {
 
     async run (client, message, args) {
 
-        if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: KICK_MEMBERS**')
-        if(!message.guild.me.hasPermission("KICK_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : KICK_MEMBERS**')
+        if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send('<a:no:997879343999111280> **You can not use this command | Permission: KICK_MEMBERS**')
+        if(!message.guild.me.hasPermission("KICK_MEMBERS")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions | Permission : KICK_MEMBERS**')
 
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
-        if(!args[0]) return message.channel.send('<:pepeno:997843592955580466> **Please specify a user**');
+        if(!args[0]) return message.channel.send('<a:no:997879343999111280> **Please specify a user**');
 
-        if(!member) return message.channel.send('<:pepeno:997843592955580466> **User not found**');
-        if(!member.kickable) return message.channel.send('<:pepeno:997843592955580466> **I can not kick this user. Either because they are the mod / admin, or their role is higher than mine**');
+        if(!member) return message.channel.send('<a:no:997879343999111280> **User not found**');
+        if(!member.kickable) return message.channel.send('<a:no:997879343999111280> **I can not kick this user. Either because they are the mod / admin, or their role is higher than mine**');
 
         if(member.id === message.author.id) return message.channel.send('**You can not kick yourself -_-**');
 
@@ -27,7 +27,7 @@ module.exports = {
             if(err) return message.channel.send(err)
         })
 
-        message.react('<:peppoyes:997843596290052177>')
+        message.react('<a:yes:997879349170684064>')
 
         const kickembed = new Discord.MessageEmbed()
         .setTitle('User has been kicked')

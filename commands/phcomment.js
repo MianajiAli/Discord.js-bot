@@ -19,7 +19,7 @@ module.exports = {
         }
 
         if(!text){
-            return message.channel.send("<:pepeno:997843592955580466> **Enter a text**");
+            return message.channel.send("<a:no:997879343999111280> **Enter a text**");
         }
 
         try {

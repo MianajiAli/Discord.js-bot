@@ -12,37 +12,37 @@ module.exports = {
 		if(prefix === null) prefix = default_prefix;
 
 		if (!message.member.hasPermission("ADMINISTRATION")) {
-            return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**");
+            return message.channel.send("<a:no:997879343999111280> **You can not use this command | Permission: ADMINISTRATOR**");
         }
 		
 		if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-			return message.channel.send("<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_ROLES**");
+			return message.channel.send("<a:no:997879343999111280> **I do not have the correct permissions | Permission : MANAGE_ROLES**");
 		  }
 
 		let channel = message.mentions.channels.first();
-		if(!channel) return message.channel.send(`<:pepeno:997843592955580466> **${prefix}rr <#channeL> <MESSAGEID> <ROLE> <EMOJI>**`)
-			if(!args[1]) return message.channel.send(`<:pepeno:997843592955580466> **${prefix}rr ${channel} <MESSAGEID> <ROLE> <EMOJI>**`)        
+		if(!channel) return message.channel.send(`<a:no:997879343999111280> **${prefix}rr <#channeL> <MESSAGEID> <ROLE> <EMOJI>**`)
+			if(!args[1]) return message.channel.send(`<a:no:997879343999111280> **${prefix}rr ${channel} <MESSAGEID> <ROLE> <EMOJI>**`)        
 		
 		let messageid = client.channels.cache.get(`${channel.id}`).messages.fetch(`${args[1]}`)
-		 if(!messageid) return message.channel.send(`<:pepeno:997843592955580466> **That's not an vaild message ID** `)
+		 if(!messageid) return message.channel.send(`<a:no:997879343999111280> **That's not an vaild message ID** `)
 		
-		if(isNaN(args[1])) return message.channel.send(`<:pepeno:997843592955580466> **Message ID Must be a number**`)
+		if(isNaN(args[1])) return message.channel.send(`<a:no:997879343999111280> **Message ID Must be a number**`)
 		let role = message.mentions.roles.first();
-		if(!role) return message.channel.send(`<:pepeno:997843592955580466> **${prefix}rr ${channel} ${args[1]} <@role> <Emoji>**`)
+		if(!role) return message.channel.send(`<a:no:997879343999111280> **${prefix}rr ${channel} ${args[1]} <@role> <Emoji>**`)
 		let check = message.guild.roles.cache.find(r => r.name === `${role.name}`)
-		if(!check) return message.channel.send(`<:pepeno:997843592955580466> **invaild role**`)
-		if(!args[3]) return message.channel.send(`<:pepeno:997843592955580466> **${prefix}rr ${channel} ${args[1]} ${role.name} <EMOJI> **`)
+		if(!check) return message.channel.send(`<a:no:997879343999111280> **invaild role**`)
+		if(!args[3]) return message.channel.send(`<a:no:997879343999111280> **${prefix}rr ${channel} ${args[1]} ${role.name} <EMOJI> **`)
 		function isCustomEmoji(emoji) {
 			return emoji.split(":").length == 1 ? false : true;
 		  }
 		  if (isCustomEmoji(args[3])) {
 		  let customemoji = Discord.Util.parseEmoji(args[3]);
 		let emojicheck = client.emojis.cache.find(emoji => emoji.id === `${customemoji.id}`);
-		if(!emojicheck) return message.channel.send(`<:pepeno:997843592955580466> **this emoji is invaild**`)
+		if(!emojicheck) return message.channel.send(`<a:no:997879343999111280> **this emoji is invaild**`)
 	  let embed = new Discord.MessageEmbed()
 	 .setThumbnail(message.guild.iconURL())
-	 .setTitle(`<:peppoyes:997843596290052177> Reaction Role`)
-	 .setDescription(`**<:peppoyes:997843596290052177> Reaction Role Sucsses**
+	 .setTitle(`<a:yes:997879349170684064> Reaction Role`)
+	 .setDescription(`**<a:yes:997879349170684064> Reaction Role Sucsses**
 	 
 	 **[Go To Message](https://discord.com/channels/${message.guild.id}/${channel.id}/${args[1]})
 	  Role : ${role}
@@ -74,7 +74,7 @@ module.exports = {
 		 let embed = new Discord.MessageEmbed()
 		 .setThumbnail(message.guild.iconURL())
 		 .setTitle(`Reaction Role`)
-		 .setDescription(`**<:peppoyes:997843596290052177> Reaction Role Sucsses**
+		 .setDescription(`**<a:yes:997879349170684064> Reaction Role Sucsses**
 		 
 		 **[Go To Message](https://discord.com/channels/${message.guild.id}/${channel.id}/${args[1]})
 		  Role : ${role}

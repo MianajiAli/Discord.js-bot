@@ -43,8 +43,8 @@ module.exports = {
         
         } catch(err) {
             const channel =  await fetch.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${name}&key=${config.google}&maxResults=1&type=channel`)
-            message.channel.send('<:pepeno:997843592955580466> **Unknown channel data error**')
-            if (!channel.body.items[0]) return message.channel.send("<:pepeno:997843592955580466> **No channel result. Try again**");
+            message.channel.send('<a:no:997879343999111280> **Unknown channel data error**')
+            if (!channel.body.items[0]) return message.channel.send("<a:no:997879343999111280> **No channel result. Try again**");
 		}
 	
 	}

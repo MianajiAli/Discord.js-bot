@@ -21,7 +21,7 @@ module.exports = {
 		else if (user.presence.activities.length > 1) status = user.presence.activities[1];
 	
 		if (user.presence.activities.length === 0 || status.name !== "Spotify" && status.type !== "LISTENING") {
-			return message.channel.send("<:pepeno:997843592955580466> **This user is not currently listening to Spotify**");
+			return message.channel.send("<a:no:997879343999111280> **This user is not currently listening to Spotify**");
 		}
 	
 		if (status !== null && status.type === "LISTENING" && status.name === "Spotify" && status.assets !== null) {

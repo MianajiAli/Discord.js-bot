@@ -10,7 +10,7 @@ module.exports = {
     async run (client, message, args) {
         let prefix = await db.get(`prefix_${message.guild.id}`);
 		if(prefix === null) prefix = default_prefix;
-		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
+		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
         if(message.channel.name.includes('ticket-')) {
 			const member = message.guild.members.cache.get(message.channel.name.split('ticket-').join(''));
 			if(message.member.hasPermission('ADMINISTRATOR') || message.channel.name === `ticket-${message.author.id}`) {
@@ -31,7 +31,7 @@ module.exports = {
 						});
 					}
 					catch(e) {
-						return message.channel.send('<:pepeno:997843592955580466> **An error occurred, please try again**');
+						return message.channel.send('<a:no:997879343999111280> **An error occurred, please try again**');
 					}
 
 					const embed = new Discord.MessageEmbed()
@@ -48,17 +48,17 @@ module.exports = {
 							ATTACH_FILES: false,
 							READ_MESSAGE_HISTORY: false,
 						}).then(() => {
-							message.channel.send(`<:peppoyes:997843596290052177> **Successfully closed ${message.channel}**`);
+							message.channel.send(`<a:yes:997879349170684064> **Successfully closed ${message.channel}**`);
 						});
 					}
 					catch(e) {
-						return message.channel.send('<:pepeno:997843592955580466> **An error occurred, please try again**');
+						return message.channel.send('<a:no:997879343999111280> **An error occurred, please try again**');
 					}
 				});
 			}
 		}
 		else {
-			return message.reply('<:pepeno:997843592955580466> **You cannot use this command here, Please use this command when you\'re closing a ticket**');
+			return message.reply('<a:no:997879343999111280> **You cannot use this command here, Please use this command when you\'re closing a ticket**');
 		}
     },
 }

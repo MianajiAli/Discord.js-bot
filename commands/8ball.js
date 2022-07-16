@@ -6,7 +6,7 @@ module.exports = {
     name: "8ball",
 
     async run(client, message, args) {
-		if(!args[1]) return message.reply("<:pepeno:997843592955580466> **Plesae enter a full question with 2 or more words**");
+		if(!args[1]) return message.reply("<a:no:997879343999111280> **Plesae enter a full question with 2 or more words**");
 		let replies = ["Yes", "No", "I don't know", "Ask again later!","I am not sure!",];
 	
 		let result = Math.floor((Math.random() * replies.length));

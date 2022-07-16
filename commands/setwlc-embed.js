@@ -8,18 +8,18 @@ module.exports = {
 
     async run (client, message, args) {
 		if (!message.member.hasPermission("ADMINISTRATION")) {
-            return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**");
+            return message.channel.send("<a:no:997879343999111280> **You can not use this command | Permission: ADMINISTRATOR**");
           }
           let channel = message.mentions.channels.first()
           
           if(!channel) {
-            return message.channel.send("<:pepeno:997843592955580466> **Please Mention the channel first**")
+            return message.channel.send("<a:no:997879343999111280> **Please Mention the channel first**")
           }
           
           
           db.set(`welcemchannel_${message.guild.id}`, channel.id)
           
-          message.channel.send(`<:peppoyes:997843596290052177> **Welcome Channel is seted as ${channel}**`)
+          message.channel.send(`<a:yes:997879349170684064> **Welcome Channel is seted as ${channel}**`)
 
 
 

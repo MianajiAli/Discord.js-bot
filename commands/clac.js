@@ -7,14 +7,14 @@ module.exports = {
 
     async run (client, message, args){
 
-        if(!args[0]) return message.channel.send('<:pepeno:997843592955580466> **Please enter a question**');
+        if(!args[0]) return message.channel.send('<a:no:997879343999111280> **Please enter a question**');
 
         let resp;
 
         try {
             resp = math.evaluate(args.join(" "))
         } catch (e) {
-            return message.channel.send('<:pepeno:997843592955580466> **Please provide a __**valid**__ question**')
+            return message.channel.send('<a:no:997879343999111280> **Please provide a __**valid**__ question**')
         }
 
         const embed = new Discord.MessageEmbed()

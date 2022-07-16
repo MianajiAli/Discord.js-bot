@@ -4,9 +4,9 @@ module.exports = {
     name: "roleinfo",
 
     async run (client, message, args) {
-		if (!args[0]) return message.channel.send("<:pepeno:997843592955580466> **You need to mention the role**")
+		if (!args[0]) return message.channel.send("<a:no:997879343999111280> **You need to mention the role**")
         let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0]) || message.guild.roles.cache.find(r => r.name.toLowerCase() === args.join(' ').toLocaleLowerCase());
-        if (!role) return message.channel.send("<:pepeno:997843592955580466> **Please enter a valid role**");
+        if (!role) return message.channel.send("<a:no:997879343999111280> **Please enter a valid role**");
 
         const status = {
             false: "**No**",

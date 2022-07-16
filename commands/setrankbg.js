@@ -10,16 +10,16 @@ module.exports = {
 		let pr = message.author.id==owner;
 
 		if(!pr) {
-			return message.channel.send('<:pepeno:997843592955580466> **This is only owner command**')
+			return message.channel.send('<a:no:997879343999111280> **This is only owner command**')
 		}
 		
 		let user = message.author;
 		  
 		  if(!args[0]) {
-			return message.channel.send("<:pepeno:997843592955580466> **Please give the link of the image**")
+			return message.channel.send("<a:no:997879343999111280> **Please give the link of the image**")
 		  }
 		  
 		  db.set(`rankbg_${user.id}`, args[0])
-		await message.channel.send(`<:peppoyes:997843596290052177> **Rank card background image seted to ${args[0]}**`)
+		await message.channel.send(`<a:yes:997879349170684064> **Rank card background image seted to ${args[0]}**`)
 	}
 }

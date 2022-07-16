@@ -10,7 +10,7 @@ module.exports = {
 
         let text = args.join(' ')
 
-        if(!text) return message.channel.send('<:pepeno:997843592955580466> **Please provide a text**')
+        if(!text) return message.channel.send('<a:no:997879343999111280> **Please provide a text**')
 
         let img = await Canvacord.Canvas.changemymind(text);
 

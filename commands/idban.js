@@ -8,15 +8,15 @@ module.exports = {
     name: "idban",
 
     async run (client, message, args) {
-		if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: BAN_MEMBERS**')
-        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions**')
+		if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('<a:no:997879343999111280> **You can not use this command | Permission: BAN_MEMBERS**')
+        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions**')
         
         const target = args[0];
-        if (isNaN(target)) return message.reply(`<:pepeno:997843592955580466> **Please specify an ID**`);
+        if (isNaN(target)) return message.reply(`<a:no:997879343999111280> **Please specify an ID**`);
 
         const reason   = args.splice(1, args.length).join(' ');
 
-        message.react('<:peppoyes:997843596290052177>')
+        message.react('<a:yes:997879349170684064>')
 
             try {
                 message.guild.members.ban(target, {reason: reason.length < 1 ? '**No reason supplied**': reason});

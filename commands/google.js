@@ -17,13 +17,13 @@ module.exports = {
 
 
 
-    if (!query) return message.channel.send("<:pepeno:997843592955580466> **Please enter the query**");
+    if (!query) return message.channel.send("<a:no:997879343999111280> **Please enter the query**");
 
 
 
     href = await search(query);
 
-    if (!href) return message.channel.send("<:pepeno:997843592955580466> **Unknown search**");
+    if (!href) return message.channel.send("<a:no:997879343999111280> **Unknown search**");
 
 
 

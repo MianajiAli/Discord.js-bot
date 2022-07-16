@@ -31,7 +31,7 @@ module.exports = {
 						});
 					}
 					catch(e) {
-						return message.channel.send('<:pepeno:997843592955580466> **An error occurred, please try again**');
+						return message.channel.send('<a:no:997879343999111280> **An error occurred, please try again**');
 					}
 
 					const embed = new Discord.MessageEmbed()
@@ -45,7 +45,7 @@ module.exports = {
 		}
 		else {
 			return message.reply(
-				'<:pepeno:997843592955580466> **You cannot use this command here, Please use this command in a open ticket**',
+				'<a:no:997879343999111280> **You cannot use this command here, Please use this command in a open ticket**',
 			);
 		}
 	}

@@ -8,17 +8,17 @@ module.exports = {
         const voice_channel = message.member.voice.channel;
         const embed = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription(`<:pepeno:997843592955580466> **You must be in a voice channel to play something**`)
+            .setDescription(`<a:no:997879343999111280> **You must be in a voice channel to play something**`)
         if (!voice_channel) return message.channel.send(embed);
 
-		if (!args[0]) return message.reply('<:pepeno:997843592955580466> **Please enter the name of the song**')
+		if (!args[0]) return message.reply('<a:no:997879343999111280> **Please enter the name of the song**')
 
         if(client.player.isPlaying(message)) {
             let song = await client.player.addToQueue(message, args.join(' '));
 
             const added = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription(`<:peppoyes:997843596290052177> **Added **__${song.name}__** to the queue**`)
+            .setDescription(`<a:yes:997879349170684064> **Added **__${song.name}__** to the queue**`)
 
             if(song)
                 message.channel.send(added);

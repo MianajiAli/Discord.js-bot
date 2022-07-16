@@ -15,7 +15,7 @@ module.exports = {
 		let target = db.get(`userb_${message.author.id}`);
 
 		const ban_error = new Discord.MessageEmbed()
-		.setDescription('<:pepeno:997843592955580466> **You are banned from using this section**')
+		.setDescription('<a:no:997879343999111280> **You are banned from using this section**')
 		.setColor(color.main)
 
 		if(target) {

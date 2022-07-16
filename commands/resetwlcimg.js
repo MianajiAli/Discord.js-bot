@@ -8,12 +8,12 @@ module.exports = {
 
     async run (client, message, args) {
 		if(!message.member.hasPermission("ADMINISTRATOR")) {
-			return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: ADMINISTRATOR**")
+			return message.channel.send("<a:no:997879343999111280> **You can not use this command | Permission: ADMINISTRATOR**")
 		  }
-		  if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions**')
+		  if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions**')
 		  
 			db.delete(`url_${message.guild.id}`)
-		   return await message.channel.send("<:peppoyes:997843596290052177> **Reseted welcome image**")
+		   return await message.channel.send("<a:yes:997879349170684064> **Reseted welcome image**")
 		
 	}
 }

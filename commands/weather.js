@@ -11,9 +11,9 @@ module.exports = {
     weather.find({search: args.join(" "), degreeType: 'C'}, function (error, result){
 
         if(error) return message.channel.send(error);
-        if(!args[0]) return message.channel.send('<:pepeno:997843592955580466> **Please insert the city**')
+        if(!args[0]) return message.channel.send('<a:no:997879343999111280> **Please insert the city**')
 
-        if(result === undefined || result.length === 0) return message.channel.send('<:pepeno:997843592955580466> **Unknown city. Please try again**');
+        if(result === undefined || result.length === 0) return message.channel.send('<a:no:997879343999111280> **Unknown city. Please try again**');
 
         let current = result[0].current;
         let location = result[0].location;

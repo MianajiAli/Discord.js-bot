@@ -21,7 +21,7 @@ module.exports = {
         .addField("Requested in", `**${guild}**`)
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		.setColor(colors.main)
-		message.channel.send(`<:peppoyes:997843596290052177> **Your request has been reported in the official server. It will be reviewed so please be patient | Type \`${prefix}server\` for join to our server**`)
+		message.channel.send(`<a:yes:997879349170684064> **Your request has been reported in the official server. It will be reviewed so please be patient | Type \`${prefix}server\` for join to our server**`)
 		channel.send(embed)
 	}
 }

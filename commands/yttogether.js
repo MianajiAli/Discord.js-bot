@@ -11,7 +11,7 @@ module.exports = {
 
     async run (client, message, args) {
 		let channel = message.member.voice.channel;
-    if(!channel) return message.channel.send("<:pepeno:997843592955580466> **You have to be in a voice channel**")
+    if(!channel) return message.channel.send("<a:no:997879343999111280> **You have to be in a voice channel**")
 
     fetch(`https://discord.com/api/v8/channels/${channel.id}/invites`, {
         method: "POST",
@@ -31,7 +31,7 @@ module.exports = {
     
     .then(res => res.json())
     .then(invite => {
-        if(!invite.code) return message.channel.send("<:pepeno:997843592955580466> **I cant start a youtube together**")
+        if(!invite.code) return message.channel.send("<a:no:997879343999111280> **I cant start a youtube together**")
         const e = new Discord.MessageEmbed()
 		.setTitle('Youtube Together Activity')
         .setDescription(`**[Click Here](https://discord.com/invite/${invite.code})**`)

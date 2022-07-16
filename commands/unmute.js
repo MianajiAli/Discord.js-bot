@@ -8,27 +8,27 @@ module.exports = {
 
     async run (client, message, args) {
 		if (!message.member.hasPermission("MUTE_MEMBERS")) {
-			return message.channel.send("<:pepeno:997843592955580466> **You can not use this command | Permission: MUTE_MEMBERS**");
+			return message.channel.send("<a:no:997879343999111280> **You can not use this command | Permission: MUTE_MEMBERS**");
 		  }
 		  if (!message.guild.me.hasPermission("MUTE_MEMBERS")) {
-			return message.channel.send("<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MUTE_MEMBERS**");
+			return message.channel.send("<a:no:997879343999111280> **I do not have the correct permissions | Permission : MUTE_MEMBERS**");
 		  }
 	  
 		  const user = message.mentions.members.first();
 	  
 		  if (!user) {
-			return message.channel.send("<:pepeno:997843592955580466> **Please mention the member to who you want to unmute**");
+			return message.channel.send("<a:no:997879343999111280> **Please mention the member to who you want to unmute**");
 		  }
 	  
 		  let muterole = message.guild.roles.cache.find(x => x.name === "Muted");
 	  
 		  if (user.roles.cache.has(muterole)) {
-			return message.channel.send("<:pepeno:997843592955580466> **This user dont have a Muted role**");
+			return message.channel.send("<a:no:997879343999111280> **This user dont have a Muted role**");
 		  }
 	  
 		  user.roles.remove(muterole)
 
-		  message.react('<:peppoyes:997843596290052177>')
+		  message.react('<a:yes:997879349170684064>')
 
 		  const mute = new Discord.MessageEmbed()
 		.setTitle('User Unmuted')

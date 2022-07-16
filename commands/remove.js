@@ -13,7 +13,7 @@ module.exports = {
 		if(message.channel.name.includes('ticket-')) {
 			const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username === args.slice(0).join(' ') || x.user.username === args[0]);
 			if(!member) {
-				return message.channel.send(`<:pepeno:997843592955580466> **Incorrect Usage, Correct Usage : ${prefix}remove <member>**`);
+				return message.channel.send(`<a:no:997879343999111280> **Incorrect Usage, Correct Usage : ${prefix}remove <member>**`);
 			}
 			try{
 				message.channel.updateOverwrite(member.user, {
@@ -22,11 +22,11 @@ module.exports = {
 					ATTACH_FILES: false,
 					READ_MESSAGE_HISTORY: false,
 				}).then(() => {
-					message.channel.send(`<:peppoyes:997843596290052177> **Successfully removed ${member} from ${message.channel}**`);
+					message.channel.send(`<a:yes:997879349170684064> **Successfully removed ${member} from ${message.channel}**`);
 				});
 			}
 			catch(e) {
-				return message.channel.send('<:pepeno:997843592955580466> **An error occurred, please try again**');
+				return message.channel.send('<a:no:997879343999111280> **An error occurred, please try again**');
 			}
 		}
 	}

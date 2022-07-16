@@ -17,7 +17,7 @@ module.exports = {
 			  message.channel.send(pgif)
 			});
 		  } else {
-			message.channel.send("<:pepeno:997843592955580466> **This isn't NSFW channel**")
+			message.channel.send("<a:no:997879343999111280> **This isn't NSFW channel**")
 		}
 	}
 }

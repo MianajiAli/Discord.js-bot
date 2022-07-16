@@ -11,15 +11,15 @@ module.exports = {
         if(!member) return message.channel.send(`**Please Mention A User**`);
         if(member.id === message.author.id) return message.channel.send('**You can not ban yourself -_-**');
 
-        if(!member) return message.channel.send('<:pepeno:997843592955580466> **User not found**');
+        if(!member) return message.channel.send('<a:no:997879343999111280> **User not found**');
 
         let reason = args.join(" ").slice(22);
         if(!reason) reason = "No Reason Specified";
         
-        if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: BAN_MEMBERS**')
-        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : BAN_MEMBERS**')
+        if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('<a:no:997879343999111280> **You can not use this command | Permission: BAN_MEMBERS**')
+        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions | Permission : BAN_MEMBERS**')
 
-        message.react('<:peppoyes:997843596290052177>')
+        message.react('<a:yes:997879349170684064>')
 
         let e = new Discord.MessageEmbed()
         .setTitle('User has been banned')

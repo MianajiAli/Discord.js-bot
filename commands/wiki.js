@@ -9,7 +9,7 @@ module.exports = {
 
     async run (client, message, args) {
 		let query = args.join(" ")
-    if(!query) return message.channel.send("<:pepeno:997843592955580466> **Please include a query**")
+    if(!query) return message.channel.send("<a:no:997879343999111280> **Please include a query**")
 
     // using ultrax package
     

@@ -20,16 +20,16 @@ module.exports = {
 					READ_MESSAGE_HISTORY: true,
 				})
 					.then(() => {
-						message.channel.send(`<:peppoyes:997843596290052177> **Successfully re-opened ${message.channel}**`);
+						message.channel.send(`<a:yes:997879349170684064> **Successfully re-opened ${message.channel}**`);
 					});
 			}
 			catch (e) {
-				return message.channel.send('<:pepeno:997843592955580466> **An error occurred, please try again**');
+				return message.channel.send('<a:no:997879343999111280> **An error occurred, please try again**');
 			}
 		}
 		else {
 			return message.reply(
-				'<:pepeno:997843592955580466> **You cannot use this command here, Please use this command on a closed ticket**',
+				'<a:no:997879343999111280> **You cannot use this command here, Please use this command on a closed ticket**',
 			);
 		}
 	}

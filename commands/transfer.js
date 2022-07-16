@@ -15,22 +15,22 @@ module.exports = {
 	
 		let balance = db.get(`account.${message.author.id}.balance`);
 	
-		if (!user) return message.channel.send("<:pepeno:997843592955580466> **Please mention the user or input the user ID**");
-		if (user.bot || user === client.user) return message.channel.send("<:pepeno:997843592955580466> **This user is a bot**");
-		if (user.id === message.author.id || user === message.author) return message.channel.send("<:pepeno:997843592955580466> **Why you want to transfer a credit to yourself?**");
+		if (!user) return message.channel.send("<a:no:997879343999111280> **Please mention the user or input the user ID**");
+		if (user.bot || user === client.user) return message.channel.send("<a:no:997879343999111280> **This user is a bot**");
+		if (user.id === message.author.id || user === message.author) return message.channel.send("<a:no:997879343999111280> **Why you want to transfer a credit to yourself?**");
 	
 		let amount = parseInt(args[1]);
 		if (!amount) return message.channel.send("**Please input a credits that you want to transfer it**");
-		if (isNaN(amount)) return message.channel.send("<:pepeno:997843592955580466> **Please input a valid number**");
+		if (isNaN(amount)) return message.channel.send("<a:no:997879343999111280> **Please input a valid number**");
 		// isNaN = is Not a Number.
 	
-		if (!balance || balance == 0) return message.channel.send("<:pepeno:997843592955580466> **Your wallet is empty**");
-		if (amount > balance) return message.channel.send("<:pepeno:997843592955580466> **You don't have an enough credits to transfer. That is way too much.**");
-		if (amount === 0) return message.channel.send("<:pepeno:997843592955580466> **You transfer, nothing? No. You cannot.**");
+		if (!balance || balance == 0) return message.channel.send("<a:no:997879343999111280> **Your wallet is empty**");
+		if (amount > balance) return message.channel.send("<a:no:997879343999111280> **You don't have an enough credits to transfer. That is way too much.**");
+		if (amount === 0) return message.channel.send("<a:no:997879343999111280> **You transfer, nothing? No. You cannot.**");
 	
 		await db.add(`account.${user.id}.balance`, amount);
 		await db.subtract(`account.${message.author.id}.balance`, amount);
 	
-		return message.channel.send(`<:peppoyes:997843596290052177> **You've been transferred to your friends (${user.tag}) $${amount} credits**`);
+		return message.channel.send(`<a:yes:997879349170684064> **You've been transferred to your friends (${user.tag}) $${amount} credits**`);
 	}
 }

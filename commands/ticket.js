@@ -10,10 +10,10 @@ module.exports = {
         let prefix = await db.get(`prefix_${message.guild.id}`);
 		if(prefix === null) prefix = default_prefix;
 
-		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
+		if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions | Permission : MANAGE_CHANNELS**')
 
 		if(message.guild.channels.cache.find(channel => channel.name === `ticket-${message.author.id}`)) {
-			return message.reply('<:pepeno:997843592955580466> **You already have a ticket, please close your exsisting ticket first before opening a new one**');
+			return message.reply('<a:no:997879343999111280> **You already have a ticket, please close your exsisting ticket first before opening a new one**');
 		}
 
 		message.delete();
@@ -35,7 +35,7 @@ module.exports = {
 			.setTitle(`${message.author.tag} Ticket\'s`)
 			.setDescription(`**${message.author}, Welcome to your channel! Support will be arriving soon**\n**While you wait please tell us what your problem is**\n**If you want to close the ticket please type \`${prefix}close\`**`)
 			.setColor(color.main)
-			message.reply(`<:peppoyes:997843596290052177> **You have successfully created a ticket, Please click on ${channel} to view your ticket**`).then(m => m.delete({ timeout: 14000 }).catch(e => {}));
+			message.reply(`<a:yes:997879349170684064> **You have successfully created a ticket, Please click on ${channel} to view your ticket**`).then(m => m.delete({ timeout: 14000 }).catch(e => {}));
 			channel.send(`${message.author}`, ticket);
 			let mChannel = db.fetch(`modlog_${message.guild.id}`)
 		    let tChannel = message.guild.channels.cache.get(mChannel)

@@ -8,14 +8,14 @@ module.exports = {
             const voice_channel = message.member.voice.channel;
             const embed = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription(`<:pepeno:997843592955580466> **You must be in a voice channel to play something**`)
+            .setDescription(`<a:no:997879343999111280> **You must be in a voice channel to play something**`)
             if (!voice_channel) return message.channel.send(embed);
 
             let status = client.player.setQueueRepeatMode(message, false);
 
             const disloop = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription(`<:peppoyes:997843596290052177> **Queue will not be longer repeated**`)
+            .setDescription(`<a:yes:997879349170684064> **Queue will not be longer repeated**`)
             if(status === null)
             return;
             message.channel.send(disloop);

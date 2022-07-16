@@ -8,12 +8,12 @@ module.exports = {
             const voice_channel = message.member.voice.channel;
             const embed = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription(`<:pepeno:997843592955580466> **You must be in a voice channel to play something**`)
+            .setDescription(`<a:no:997879343999111280> **You must be in a voice channel to play something**`)
             if (!voice_channel) return message.channel.send(embed);
             let isDone = client.player.stop(message);
             const stop = new MessageEmbed()
             .setColor(colors.main)
-            .setDescription('<:peppoyes:997843596290052177> **Disconnected**')
+            .setDescription('<a:yes:997879349170684064> **Disconnected**')
             if(isDone)
             message.channel.send(stop);
     }

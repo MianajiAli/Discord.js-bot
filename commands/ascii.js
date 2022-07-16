@@ -6,7 +6,7 @@ module.exports = {
     description: "Converts text to ascii",
 
     async run (client, message, args){
-        if(!args[0]) return message.channel.send('<:pepeno:997843592955580466> **Please provide some text**');
+        if(!args[0]) return message.channel.send('<a:no:997879343999111280> **Please provide some text**');
 
         msg = args.join(" ");
 
@@ -15,7 +15,7 @@ module.exports = {
                 console.log('Something went wrong');
                 console.dir(err);
             }
-            if(data.length > 2000) return message.channel.send('<:pepeno:997843592955580466> **Please provide text shorter than 2000 characters**')
+            if(data.length > 2000) return message.channel.send('<a:no:997879343999111280> **Please provide text shorter than 2000 characters**')
 
             message.channel.send('```' + data + '```')
         })

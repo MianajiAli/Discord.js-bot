@@ -10,37 +10,37 @@ module.exports = {
 
     async run (client, message, args) {
 		if(!message.member.hasPermission('MANAGE_MESSAGES')) {
-			return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: MANAGE_MESSAGES**');
+			return message.channel.send('<a:no:997879343999111280> **You can not use this command | Permission: MANAGE_MESSAGES**');
 		}
 
-		if(!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_MESSAGES**')
+		if(!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions | Permission : MANAGE_MESSAGES**')
 	
 
 		let giveawayChannel = message.mentions.channels.first();
 
 		if(!giveawayChannel){
-			return message.channel.send('<:pepeno:997843592955580466> **Please provide a channel**');
+			return message.channel.send('<a:no:997879343999111280> **Please provide a channel**');
 		}
 	
 
 		let giveawayDuration = args[1];
 
 		if(!giveawayDuration || isNaN(ms(giveawayDuration))){
-			return message.channel.send('<:pepeno:997843592955580466> **Pleae provide a valid duration**');
+			return message.channel.send('<a:no:997879343999111280> **Pleae provide a valid duration**');
 		}
 	
 
 		let giveawayNumberWinners = args[2];
 
 		if(isNaN(giveawayNumberWinners) || (parseInt(giveawayNumberWinners) <= 0)){
-			return message.channel.send('<:pepeno:997843592955580466> **Please provide a valid number of winners**');
+			return message.channel.send('<a:no:997879343999111280> **Please provide a valid number of winners**');
 		}
 	
 
 		let giveawayPrize = args.slice(3).join(' ');
 
 		if(!giveawayPrize){
-			return message.channel.send('<:pepeno:997843592955580466> **You have to specify a valid prize | Example : nitro**');
+			return message.channel.send('<a:no:997879343999111280> **You have to specify a valid prize | Example : nitro**');
 		}
 	
 		client.giveawaysManager.start(giveawayChannel, {
@@ -74,6 +74,6 @@ module.exports = {
 			}
 		});
 	
-		message.channel.send(`<:peppoyes:997843596290052177> **Giveaway starting in ${giveawayChannel}**`);
+		message.channel.send(`<a:yes:997879349170684064> **Giveaway starting in ${giveawayChannel}**`);
 	}
 }

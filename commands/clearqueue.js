@@ -8,10 +8,10 @@ module.exports = {
         const voice_channel = message.member.voice.channel;
         const embed = new MessageEmbed()
         .setColor(colors.main)
-        .setDescription(`<:pepeno:997843592955580466> **You must be in a voice channel to play something**`)
+        .setDescription(`<a:no:997879343999111280> **You must be in a voice channel to play something**`)
         const embed1 = new MessageEmbed()
         .setColor(colors.main)
-        .setDescription('<:peppoyes:997843596290052177> **Cleared the queue**')
+        .setDescription('<a:yes:997879349170684064> **Cleared the queue**')
         if (!voice_channel) return message.channel.send(embed);
         let isDone = client.player.clearQueue(message);
         if(isDone)

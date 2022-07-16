@@ -10,9 +10,9 @@ module.exports = {
     async run (client, message, args) {
 		try {
 			if (!message.member.hasPermission('MANAGE_ROLES')) {
-				return message.reply('<:pepeno:997843592955580466> **You can not use this command | Permission: MANAGE_ROLES**')
+				return message.reply('<a:no:997879343999111280> **You can not use this command | Permission: MANAGE_ROLES**')
 			}
-			if(!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_ROLES**')
+			if(!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions | Permission : MANAGE_ROLES**')
 
             let prefix = await db.get(`prefix_${message.guild.id}`);
             if(prefix === null) prefix = default_prefix;
@@ -47,7 +47,7 @@ module.exports = {
 					color: `${Color.first().content.toUpperCase() || "2f3136"}`
 				}
 			})
-            message.channel.send(`<:peppoyes:997843596290052177> **Successfully created the role**`)
+            message.channel.send(`<a:yes:997879349170684064> **Successfully created the role**`)
         } catch (error) {
             console.error(error);
         }

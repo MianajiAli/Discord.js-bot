@@ -7,13 +7,13 @@ module.exports = {
 
     async run(client, message, args) {
 		if(!message.member.hasPermission('MANAGE_MESSAGES')) {
-			return message.channel.send('<:pepeno:997843592955580466> **You can not use this command | Permission: MANAGE_MESSAGES**');
+			return message.channel.send('<a:no:997879343999111280> **You can not use this command | Permission: MANAGE_MESSAGES**');
 		}
 		
-		if(!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.channel.send('<:pepeno:997843592955580466> **I do not have the correct permissions | Permission : MANAGE_MESSAGES**')
+		if(!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.channel.send('<a:no:997879343999111280> **I do not have the correct permissions | Permission : MANAGE_MESSAGES**')
 	
 		if(!args[0]){
-			return message.channel.send('<:pepeno:997843592955580466> **You have to specify a valid message ID**');
+			return message.channel.send('<a:no:997879343999111280> **You have to specify a valid message ID**');
 		}
 	
 
@@ -25,7 +25,7 @@ module.exports = {
 	
 
 		if(!giveaway){
-			return message.channel.send(`<:pepeno:997843592955580466> **Unable to find a giveaway for ${args.join(' ')}**`);
+			return message.channel.send(`<a:no:997879343999111280> **Unable to find a giveaway for ${args.join(' ')}**`);
 		}
 	
 
@@ -35,14 +35,14 @@ module.exports = {
 
 		.then(() => {
 
-			message.channel.send(`<:peppoyes:997843596290052177> **Giveaway will end in less than ${(client.giveawaysManager.options.updateCountdownEvery/1000)} seconds...**`);
+			message.channel.send(`<a:yes:997879349170684064> **Giveaway will end in less than ${(client.giveawaysManager.options.updateCountdownEvery/1000)} seconds...**`);
 		})
 		.catch((e) => {
 			if(e.startsWith(`Giveaway with message ID ${giveaway.messageID} is already ended`)){
-				message.channel.send('<:pepeno:997843592955580466> **This giveaway is already ended**');
+				message.channel.send('<a:no:997879343999111280> **This giveaway is already ended**');
 			} else {
 				console.error(e);
-				message.channel.send('<:pepeno:997843592955580466> **An error occured**');
+				message.channel.send('<a:no:997879343999111280> **An error occured**');
 			}
 		});
 	}

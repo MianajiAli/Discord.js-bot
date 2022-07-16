@@ -20,14 +20,14 @@ module.exports = {
 		try {
 			
 			if (point !== null && cooldown2 - (Date.now() - point) > 0) {
-				return message.channel.send(`<:pepeno:997843592955580466> **Please wait another 2 hours until the server can be bumped**`);
+				return message.channel.send(`<a:no:997879343999111280> **Please wait another 2 hours until the server can be bumped**`);
 			} else {
 				db.add(`svpoints_${message.guild.id}`, amount2)
 	        	db.set(`bump_${message.guild.id}`, Date.now())
 				const embed = new Discord.MessageEmbed()
 				.setTitle('DevEvilBot.xyz : A Multifunctional Discord Bot')
 				.setURL('https://dsc.gg/devevilbot')
-				.setDescription(`<:peppoyes:997843596290052177> **Server bumped** \n**Type \`${prefix}svpoints\` to see the server points**`)
+				.setDescription(`<a:yes:997879349170684064> **Server bumped** \n**Type \`${prefix}svpoints\` to see the server points**`)
 				.setImage('https://cdn.discordapp.com/attachments/468141324906921984/879445217919504384/bumped.png')
 				.setColor(color.main)
 				.setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
@@ -37,7 +37,7 @@ module.exports = {
 	
 		} catch (error) {
 			console.log(error);
-			return message.channel.send(`<:pepeno:997843592955580466> **Oopsie, unknown error I guess: ${error}**`);
+			return message.channel.send(`<a:no:997879343999111280> **Oopsie, unknown error I guess: ${error}**`);
 		}
 	}
 }

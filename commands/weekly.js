@@ -11,7 +11,7 @@ module.exports = {
       let target = db.fetch(`userb_${message.author.id}`);
 
 		const ban_error = new Discord.MessageEmbed()
-		.setDescription('<:pepeno:997843592955580466> **You are banned from using this section**')
+		.setDescription('<a:no:997879343999111280> **You are banned from using this section**')
 		.setColor(color.main)
 
 		if(target) {
@@ -28,9 +28,9 @@ module.exports = {
     if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
         let time = ms(timeout - (Date.now() - weekly));
 
-        message.channel.send(`<:pepeno:997843592955580466> **You already collected your weekly reward**`)
+        message.channel.send(`<a:no:997879343999111280> **You already collected your weekly reward**`)
     } else {
-    message.channel.send(`<:peppoyes:997843596290052177> **Great ${message.author.tag} You've been received 1000 DB Coin 🪙**`)
+    message.channel.send(`<a:yes:997879349170684064> **Great ${message.author.tag} You've been received 1000 DB Coin 🪙**`)
     db.add(`money_${message.author.id}`, amount)
     db.set(`weekly_${message.author.id}`, Date.now())
         

@@ -18,7 +18,7 @@ module.exports = {
 
 	
 		if (isPlaying.has(message.author.id)) {
-		  return message.channel.send("<:pepeno:997843592955580466> **The game already started**");
+		  return message.channel.send("<a:no:997879343999111280> **The game already started**");
 		}
 	
 		isPlaying.add(message.author.id);
