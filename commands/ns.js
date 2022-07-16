@@ -11,6 +11,7 @@ module.exports = {
 
 			const tn =args[0]
 			const nu =args[1]
+			const time =args[2]
 			var i = 1;                  //  set your counter to 1
 
 function myLoop() {         //  create a loop function
@@ -27,7 +28,7 @@ function myLoop() {         //  create a loop function
     if (i < nu) {           //  if the counter < 10, call the loop function
       myLoop();             //  ..  again which will trigger another 
     }                       //  ..  setTimeout()
-  }, 8000)
+  }, time*1000)
 }
 
 myLoop();  
