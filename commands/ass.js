@@ -10,7 +10,7 @@ module.exports = {
 			superagent.get('https://nekobot.xyz/api/image')
 			.query({ type: 'ass'})
 			.end((err, response) => {
-				const anal = new Discord.MessageEmbed()
+				const ass = new Discord.MessageEmbed()
 				.setTitle('Enjoy :smiling_imp:')
 				.setImage(response.body.message)
 				.setColor(colors.main)

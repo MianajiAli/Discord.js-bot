@@ -59,7 +59,7 @@ module.exports = {
                 timeRemaining: `**Time remaining :** **{duration}**`,
                 inviteToParticipate: "**React with 🎉 to enter**",
                 winMessage: `**Congrats {winners}, you won** **{prize}**`,
-                embedFooter: "**Giveaway time**",
+                embedFooter: `Mr Bangi`,
                 noWinner: "**Couldn't determine a winner**",
                 hostedBy: `**Hosted by {user}**`,
                 winners: "winner(s)",
