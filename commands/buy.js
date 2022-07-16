@@ -10,7 +10,7 @@ module.exports = {
         let target = db.get(`userb_${message.author.id}`);
 
 		const ban_error = new MessageEmbed()
-		.setDescription('<a:no:863733318809812992> **You are banned from using this section | Reason : Abuse\n[Contact](https://devevilbot.xyz/contact) with the [owner of the bot](https://discord.com/users/468132563714703390) to appeal a permanent ban**')
+		.setDescription('<a:no:863733318809812992> **You are banned from using this section**')
 		.setColor(colors.main)
 
 		if(target) {
@@ -122,7 +122,7 @@ module.exports = {
 
             let Embed12 = new MessageEmbed()
                 .setColor(colors.main)
-                .setDescription(`**Purchased DB Coin For 1,000,000 🪙\nSend amount of coins you need to DevEvil#8745 to be added to your account**`);
+                .setDescription(`**Purchased DB Coin For 1,000,000 🪙\nSend amount of coins you need to ALIEN#0028 to be added to your account**`);
 
             db.subtract(`money_${user.id}`, 1000000)
             message.channel.send(Embed12)

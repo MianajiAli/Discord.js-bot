@@ -1,12 +1,12 @@
 {
-  "name": "devevilbot",
+  "name": "Mr Bangi",
   "version": "2.0.0",
-  "description": "DevEvilBot.xyz is a multifunctional bot that simplifies server management, Also features Games , Fun , NSFW, Welcome Message , Leveling System and much more...",
+  "description": "Mr Bangi is a multifunctional bot that simplifies server management, Also features Games , Fun , NSFW, Welcome Message , Leveling System and much more...",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
   },
-  "author": "DevEvil#8745",
+  "author": "ALIEN#0028",
   "license": "Apache-2.0",
   "dependencies": {
     "@discordjs/node-pre-gyp": "^0.4.1",

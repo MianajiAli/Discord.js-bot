@@ -9,7 +9,7 @@ module.exports = {
 		let cmd = messageArry[0]; 
 		const about = new Discord.MessageEmbed()
 		.setTitle('About')
-		.setDescription('**DevEvil.xyz is a multifunctional bot that simplifies server management, Created by DevEvil#8745**\n**Also features Games , Fun , NSFW and much more**')
+		.setDescription('**Mr Bangi is a multifunctional bot that simplifies server management, Created by ALIEN#0028**\n**Also features Games , Fun , NSFW and much more**')
 		.setThumbnail(client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		.setColor(colors.main)
 		message.channel.send(about)

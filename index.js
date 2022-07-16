@@ -60,25 +60,19 @@ client.on("ready", () => {
     );
     readychannel.send(ready);
 
-  const DevEvil = String.raw`
-
-
-
-
-  _____             ______     _ _ ____        _   
- |  __ \           |  ____|   (_) |  _ \      | |  
- | |  | | _____   _| |____   ___| | |_) | ___ | |_ 
- | |  | |/ _ \ \ / /  __\ \ / / | |  _ < / _ \| __|
- | |__| |  __/\ V /| |___\ V /| | | |_) | (_) | |_ 
- |_____/ \___| \_/ |______\_/ |_|_|____/ \___/ \__|
-                                                   
-                                                   
-      DevEvilBot.xyz is online               
-      Developer: DevEvil#8745
+  const mrbangi = String.raw`
+  __  __        ____                    _ 
+ |  \/  |_ __  | __ )  __ _ _ __   __ _(_)
+ | |\/| | '__| |  _ \ / _  |  _ \ / _  | |
+ | |  | | |    | |_) | (_| | | | | (_| | |
+ |_|  |_|_|    |____/ \__ _|_| |_|\__  |_|
+                                  |___/  
+                                               
+      Developer: ALIEN#0028
 
 `;
 
-console.log(blue(DevEvil));
+console.log(blue(mrbangi));
 
 const arrayOfStatus = [
   `ＤＡＲＫ ＭＯＯＮ`,
@@ -120,9 +114,9 @@ client.on("guildCreate", (guild) => {
       channel.permissionsFor(guild.me).has("SEND_MESSAGES")
   );
   const joinembed = new Discord.MessageEmbed()
-    .setAuthor("Hello, I'm DevEvilBot.xyz", client.user.displayAvatarURL())
+    .setAuthor("Hello, I'm Mr Bangi", client.user.displayAvatarURL())
     .setDescription(
-      "**Thank you for inviting me to your server :grin: :heart:** \n**Mention me for help or type ``de!help``** \n**Join our server for news of bot updates by typing ``de!server``** \n**Your server prefix: ``de!``** \n**You can support me by your upvotes ``de!upvote``** \n**You can change the bot prefix by typing ``de!prefix``**"
+      "**Thank you for inviting me to your server :grin: :heart:**"
     )
     .setThumbnail(
       client.user.displayAvatarURL({ format: "png", dynamic: true, size: 1024 })

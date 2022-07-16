@@ -35,7 +35,7 @@ module.exports = {
 
             const r = new Discord.MessageEmbed()
             .setTitle('Getting Started')
-            .setDescription('**You can skip the questions by typing ``skip`` and you can cancel the setup by typing ``cancel``**\n **See example and tutorial by [Clicking Here](https://docs.devevilbot.xyz/tutorials/embed)**')
+            .setDescription('**You can skip the questions by typing ``skip`` and you can cancel the setup by typing ``cancel``**')
             .setColor(colors.main)
             message.channel.send(r)
             

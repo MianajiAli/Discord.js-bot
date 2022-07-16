@@ -15,9 +15,6 @@ module.exports = {
 		 .setTitle('Commands List')
 		 .setDescription(`**The prefix is currently \`${prefix}\`** \n**You can change the bot prefix by typing \`${prefix}prefix <prefix>\`** \n**Support me by [inviting](https://discord.com/api/oauth2/authorize?client_id=816644254485970986&permissions=8&scope=bot) me to your amazing server 💜** \n** you can join the [support server](https://dsc.gg/1dk) and ask for help there or you can report the issue by typing \`${prefix}report <bug>\`** \n`)
 		 .addField('🔨 Moderation', `\`${prefix}mod\``, true)
-		 .addField(':shield: Anti Raid❌', `\`${prefix}ar-setup\``, true)
-		 .addField(':mute: Anti Swear❌', `\`${prefix}anti-swear\``, true)
-         .addField(':musical_note:  Music❌', `\`${prefix}music-help\``, true)
 		 .addField(':dividers: Mod Log (Important)', `\`${prefix}modlog\``, true)
 		 .addField(':trophy: Leveling System', `\`${prefix}lvlsetup\``, true)
 		 .addField(':video_game: Game', `\`${prefix}game\``, true)
@@ -32,6 +29,8 @@ module.exports = {
 		 .addField(':envelope: Invite Manager', `\`${prefix}invmanager\``, true)
 		 .addField(':wave: Welcome Message', `\`${prefix}wlchelp\``, true)
 		 .addField(':wave: Leave Message', `\`${prefix}leavehelp\``, true)
+		 .addField(':pleading_face: Emotions', `\`${prefix}emo\``, true)
+		 .addField(':robot: Bot Info', `\`${prefix}bot\``, true)
 		 .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		 .setColor(colors.main)
 		 
@@ -43,13 +42,15 @@ module.exports = {
 		 .addField(':robot: Bot Info', `\`${prefix}bot\``, true)
 		 .addField(':arrow_up: Bump Server', `\`${prefix}bump\``, true)
 		 .addField(':sparkles: Premium', `\`${prefix}premium\``, true)
+		 .addField(':shield: Anti Raid❌', `\`${prefix}ar-setup\``, true)
+		 .addField(':mute: Anti Swear❌', `\`${prefix}anti-swear\``, true)
+         .addField(':musical_note:  Music❌', `\`${prefix}music-help\``, true)
 		 .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
 		 .setColor(colors.main)
 
 
     const pages = [
 		page1,
-        page2,
     ]
 
     const emoji = ["⏪", "⏩"]

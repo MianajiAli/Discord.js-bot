@@ -15,7 +15,7 @@ module.exports = {
 		let target = db.get(`userb_${message.author.id}`);
 
 		const ban_error = new Discord.MessageEmbed()
-		.setDescription('<a:no:863733318809812992> **You are banned from using this section | Reason : Abuse\n[Contact](https://devevilbot.xyz/contact) with the [owner of the bot](https://discord.com/users/468132563714703390) to appeal a permanent ban**')
+		.setDescription('<a:no:863733318809812992> **You are banned from using this section**')
 		.setColor(color.main)
 
 		if(target) {
