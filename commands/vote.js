@@ -9,13 +9,14 @@ module.exports = {
 		if (sayMessage.length < 1) return message.channel.send("Write something")
 	  const embed = new Discord.MessageEmbed()
 	   .setColor(colors.main)
-	   .addField("New Vote:", `**${sayMessage}**`)
 	   .setTitle(`Vote starting by ${message.author.username}`)
-	   .setFooter(`${client.user.username}`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+	   .setDescription(`> **${sayMessage}**`)
+	   .setFooter(`${message.author.username}`, message.author.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+	   .setThumbnail(client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))  
 	   .setTimestamp()
 		message.channel.send({embed}).then(m => {
-		   m.react('<a:yes:997879349170684064>');
-		   m.react('<a:no:997879343999111280>');
+			m.react('<:like:997887404339900527>');
+			m.react('<:dislike:997887406592241765>');
 		})   
 	}
 }	 
